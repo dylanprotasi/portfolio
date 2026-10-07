@@ -272,7 +272,7 @@ body.news{--bg:#fff;--fg:#111;--mut:#5a5a5a;--line:#e1e1e1;--acc:#d0021b;--pink:
 <p class="sub">Content &amp; marketing voor fashion en film</p>
 <ul class="items" id="items">
 <li><a href="#werk" class="on">Werk</a></li>
-<li><a href="#/nieuws">Nieuws &amp; blog</a></li>
+<li><a href="#/nieuws">PR-OTASI</a></li>
 <li><a href="#over">Over mij</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="#/kinepolis">▸ Speel trailers af</a></li>
@@ -295,9 +295,9 @@ body.news{--bg:#fff;--fg:#111;--mut:#5a5a5a;--line:#e1e1e1;--acc:#d0021b;--pink:
 </div>
 </section>
 
-<section id="blog"><div class="ch">NIEUWS &amp; BLOGS</div><h2>Blog</h2>
+<section id="blog"><div class="ch">PR-OTASI</div><h2>Blog</h2>
 <a class="win" href="#/nieuws/elise-mertens"><div class="bar"><span>PERSBERICHT.TXT</span><span>06-10-2026</span></div><div class="in" style="flex-direction:row;gap:18px;flex-wrap:wrap"><figure style="margin:0;width:260px;max-width:100%"><img id="tmth" alt="Elise Mertens" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block"><figcaption style="font-size:12px;color:var(--mut);padding-top:4px">Elise Mertens. © epa</figcaption></figure><div style="flex:1;min-width:220px"><h3>Elise Mertens wordt het nieuwe gezicht van Hampton Bays</h3><p>Toptennister kiest bewust voor Belgisch modemerk lang voor officiële ambassadeurschap.</p><div class="go">▶ Lees verder</div></div></div></a>
-<a class="btn" href="#/nieuws" style="margin-top:14px">▶ Naar de nieuwssite</a></section>
+<a class="btn" href="#/nieuws" style="margin-top:14px">▶ Naar PR-OTASI</a></section>
 
 <section id="over">
 <div class="ch">HOOFDSTUK 02</div><h2>Over mij</h2>
@@ -343,7 +343,7 @@ function newsView(k){
 if(!done)end();
 var b=document.body.classList;['winter','hb','summer','disney','mag','cinema'].forEach(function(c){b.remove(c)});b.add('pj');b.add('news');snow(0);
 var d=new Date().toLocaleDateString('nl-BE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-var h='<div class="nw"><div class="nw-top"><div class="in"><a href="#werk">◀ Terug naar portfolio</a><span>'+d+'</span></div></div><header class="nw-head"><a class="nw-logo" href="#/nieuws">Nieuws<b>&amp;</b>Blogs</a><span class="nw-tag">Door Dylan Protasi</span></header><main class="nw-main">';
+var h='<div class="nw"><div class="nw-top"><div class="in"><a href="#werk">◀ Terug naar portfolio</a><span>'+d+'</span></div></div><header class="nw-head"><a class="nw-logo" href="#/nieuws">PR<b>-</b>OTASI</a><span class="nw-tag">Door Dylan Protasi</span></header><main class="nw-main">';
 if(k==='nieuws/elise-mertens'){
 h+=`<figure class="nw-fig"><img class="nw-banner" data-i="tm" alt="Elise Mertens"><figcaption>Elise Mertens. © epa</figcaption></figure><article class="nw-art"><span class="nw-cat">Persbericht · Mode</span><h1>Elise Mertens wordt het nieuwe gezicht van Hampton Bays</h1><p class="nw-sub">Toptennister kiest bewust voor Belgisch modemerk lang voor officiële ambassadeurschap.</p><div class="nw-by">Door Dylan Protasi · 6 oktober 2026 · 1 min lezen</div>
 <p><b>Deinze, 6 oktober 2026</b> – De Belgische toptennister Elise Mertens is door het modemerk Hampton Bays aangesteld als officiële ambassadrice. Ze wordt het gezicht van de komende spring/summer 2027-collectie. De samenwerking is vandaag bekendgemaakt en komt tot stand vanuit een reeds bestaande liefde van de tennister voor het kledingmerk.</p>
