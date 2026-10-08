@@ -254,6 +254,12 @@ body.news{--bg:#fff;--fg:#111;--mut:#5a5a5a;--line:#e1e1e1;--acc:#d0021b;--pink:
 .nw-note{margin-top:36px;background:#f4f4f4;border-top:3px solid #111;padding:16px 20px;font:15px/1.6 system-ui,sans-serif}
 .nw-note b{display:block;text-transform:uppercase;letter-spacing:.1em;font-size:12px;margin-bottom:6px}
 .nw-note a{color:#d0021b}
+.nw-prod{margin:0 0 26px}.nw-prod .nwp{background:#e0e0e1;display:flex;justify-content:center}.nw-prod img{display:block;width:100%;max-width:418px;height:auto;cursor:zoom-in}
+.nw-duo{margin:26px 0}.nw-duo .nwp{display:grid;grid-template-columns:1fr 1fr;gap:10px}.nw-duo img{display:block;width:100%;height:auto;cursor:zoom-in}
+.nw-prod figcaption,.nw-duo figcaption{font:13px system-ui,sans-serif;color:#666;padding-top:8px}
+.nw-hero img.nw-ct{object-fit:contain;background:#e0e0e1}
+.nw-hero+.nw-hero{margin-top:36px;padding-top:36px;border-top:1px solid #ddd}
+.nw-src{font:14px system-ui,sans-serif;color:#555;border-top:1px solid #ddd;padding-top:14px;margin-top:30px}.nw-src a{color:#d0021b}
 .nw-back2{display:inline-block;margin:26px 0 0;font:14px system-ui,sans-serif;color:#d0021b!important;text-decoration:none}
 @media(prefers-reduced-motion:reduce){.pc:hover::after{animation:none}.mqt{animation:none}.mq{overflow-x:auto}.waves,.sun{animation:none}.marq{animation:none}.scr.st:after{animation:none}}
 @media(prefers-reduced-motion:reduce){.logo,.press,#boot .cur{animation:none}html{scroll-behavior:auto}}
@@ -297,6 +303,7 @@ body.news{--bg:#fff;--fg:#111;--mut:#5a5a5a;--line:#e1e1e1;--acc:#d0021b;--pink:
 </section>
 
 <section id="blog"><div class="ch">PR-OTASI</div><h2>Blog</h2>
+<a class="win" href="#/nieuws/dior-american-psycho" style="margin-bottom:14px"><div class="bar"><span>BLOG.TXT</span><span>08-10-2026</span></div><div class="in" style="flex-direction:row;gap:18px;flex-wrap:wrap"><figure style="margin:0;width:260px;max-width:100%"><img src="img/dp1.jpg" alt="Dior Book Tote met de cover van American Psycho" style="width:100%;aspect-ratio:3/2;object-fit:contain;background:#e0e0e1;display:block"><figcaption style="font-size:12px;color:var(--mut);padding-top:4px">Beeld: Dior</figcaption></figure><div style="flex:1;min-width:220px"><h3>Dior zet American Psycho op een tas. Het internet vindt het “basic”.</h3><p>Zonder grote campagne of aankondiging bracht Dior een American Psycho-collectie uit.</p><div class="go">▶ Lees verder</div></div></div></a>
 <a class="win" href="#/nieuws/elise-mertens"><div class="bar"><span>PERSBERICHT.TXT</span><span>06-10-2026</span></div><div class="in" style="flex-direction:row;gap:18px;flex-wrap:wrap"><figure style="margin:0;width:260px;max-width:100%"><img id="tmth" alt="Elise Mertens" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block"><figcaption style="font-size:12px;color:var(--mut);padding-top:4px">Elise Mertens. © epa</figcaption></figure><div style="flex:1;min-width:220px"><h3>Elise Mertens wordt het nieuwe gezicht van Hampton Bays</h3><p>Toptennister kiest bewust voor Belgisch modemerk lang voor officiële ambassadeurschap.</p><div class="go">▶ Lees verder</div></div></div></a>
 <a class="btn" href="#/nieuws" style="margin-top:14px">▶ Naar PR-OTASI (perssite)</a></section>
 
@@ -345,7 +352,41 @@ if(!done)end();
 var b=document.body.classList;['winter','hb','summer','disney','mag','cinema'].forEach(function(c){b.remove(c)});b.add('pj');b.add('news');snow(0);
 var d=new Date().toLocaleDateString('nl-BE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 var h='<div class="nw"><div class="nw-top"><div class="in"><a href="#werk">◀ Terug naar portfolio</a><span>'+d+'</span></div></div><header class="nw-head"><a class="nw-logo" href="#/nieuws">PR<b>-</b>OTASI<small>(perssite)</small></a><span class="nw-tag">Door Dylan Protasi</span></header><main class="nw-main">';
-if(k==='nieuws/elise-mertens'){
+if(k==='nieuws/dior-american-psycho'){
+h+=`<article class="nw-art"><span class="nw-cat">Blog · Mode</span><h1>Dior zet American Psycho op een tas. Het internet vindt het “basic”.</h1><p class="nw-sub">Zonder grote campagne of aankondiging bracht Dior een American Psycho-collectie uit.</p><div class="nw-by">Door Dylan Protasi · 8 oktober 2026 · 3 min lezen</div>
+<figure class="nw-prod"><div class="nwp"><img data-i="dp1" alt="Zwarte Dior Book Tote met de cover van American Psycho"></div><figcaption>De Book Tote met de cover van American Psycho. Beeld: Dior</figcaption></figure>
+<p>Dior heeft een nieuwe American Psycho-collectie uitgebracht. Zonder grote campagne of aankondiging. Ik zag de collectie eigenlijk pas voorbij komen via Outlander Magazine op Instagram.</p>
+<p>Het gaat om een zwarte Book Tote in canvas, met witte geborduurde letters, een rode lijn onder de naam Bret Easton Ellis en onderaan het Dior-logo in rood. Daarnaast zijn er ook twee zwarte lederen kaarthouders.</p>
+<h3>Even terug</h3>
+<p>De Book Tote bestaat al sinds 2018. Toen Jonathan Anderson in juni 2025 zijn eerste Dior-show presenteerde, nam hij de naam van de tas wel heel letterlijk. Een book tote, dus een tas met boeken erop.</p>
+<p>Geen groot Dior-logo over de hele tas, maar covers van bekende eerste edities. Dracula in felgeel werd meteen een van de opvallendste designs. Daarna volgden onder andere Ulysses, In Cold Blood en Les Fleurs du Mal. En nu dus American Psycho.</p>
+<h3>De reacties</h3>
+<p>De Instagram-post haalde ondertussen bijna 10.000 likes. Toch is niet iedereen overtuigd. De populairste reactie, met bijna 900 likes, zegt:</p>
+<blockquote>“I was hoping for more... this is incredibly basic.”<cite>Populairste reactie onder de post</cite></blockquote>
+<p>Een andere reactie vergelijkt het zelfs met Primark die toevallig een licentie heeft kunnen bemachtigen.</p>
+<p>En eerlijk? Ik snap het wel.</p>
+<p>Dracula was felgeel en viel meteen op. Deze tas is gewoon zwart met witte letters. Je moet eigenlijk twee keer kijken voordat je doorhebt dat het om een Dior-tas gaat.</p>
+<p>Toch denk ik dat daar net iets interessants in zit.</p>
+<h3>Waarom het wel klopt</h3>
+<p>Bij Patrick Bateman gaat in American Psycho alles over merken. Zijn pak, zijn restaurantkeuzes, zijn visitekaartje. Alles draait om status en wie het beste heeft.</p>
+<p>Het boek is eigenlijk een satire op precies die wereld. En nu staat American Psycho op een luxetas van duizenden euro's.</p>
+<p>Voor mij zit het leukste detail zelfs niet op de tas, maar bij de kaarthouders.</p>
+<figure class="nw-duo"><div class="nwp"><img data-i="dp2" alt="Zwarte lederen Dior-kaarthouder met rode binnenkant en de cover van American Psycho"><img data-i="dp3" alt="Platte zwarte lederen Dior-kaarthouder met de cover van American Psycho"></div><figcaption>De twee kaarthouders uit de collectie. Beeld: Dior</figcaption></figure>
+<p>Een van de bekendste scènes uit de film draait rond visitekaartjes. Mannen in pak die elkaars kaartje bekijken en elkaar proberen te overtreffen. Onder de post vraagt iemand dan ook al naar een “Paul Allen’s Dior collab”.</p>
+<p>Dior verkoopt nu letterlijk het ding waarin je je visitekaartjes kunt steken.</p>
+<p>Of dat bewust als knipoog bedoeld is of gewoon een slimme manier om de collectie uit te breiden, weet ik niet. Maar het werkt wel.</p>
+<h3>Wat ik er als communicatiestudent in zie</h3>
+<p>Wat ik vooral interessant vind, is dat Dior er eigenlijk bijna niets over zegt.</p>
+<p>Geen grote campagne, geen enorme aankondiging. Toch wordt er volop over gepraat. Of mensen de tas nu lui, basic of juist geniaal vinden: de discussie doet eigenlijk al het werk.</p>
+<p>En daar zit volgens mij de slimme communicatie achter.</p>
+<p>De tas zelf verandert niet. Alleen het boek verandert. Elke nieuwe titel kan dus opnieuw een post, discussie en mening opleveren. Hetzelfde product krijgt zo telkens opnieuw aandacht.</p>
+<p>Ook de timing zit mee. Luca Guadagnino werkt aan een nieuwe verfilming van American Psycho. En dat is toevallig de regisseur met wie Jonathan Anderson al samenwerkte voor de kostuums van Challengers en Queer.</p>
+<p>Misschien is die timing dus geen toeval.</p>
+<h3>Zou ik hem dragen?</h3>
+<p>Nee. Ten eerste heb ik eerlijk gezegd het geld niet voor een Dior Book Tote. Maar zelfs als ik dat geld had, zou ik hem waarschijnlijk niet kopen. Zeker na het schandaal rond de productieketen van Dior vind ik het moeilijk om duizenden euro's voor zo’n tas te verantwoorden. Uit een Italiaans gerechtelijk onderzoek in 2024 bleek dat onderaannemers ongeveer 53 euro kregen voor bepaalde Dior-tassen die voor zo’n 2.600 euro in de winkel lagen.</p>
+<div class="nw-src">Aanleiding: <a href="https://www.instagram.com/p/DeNF-JCCNqd/" target="_blank" rel="noopener">de post van Outlander Magazine op Instagram</a>.</div>
+<a class="nw-back2" href="#/nieuws">◀ Alle berichten</a></article>`;
+}else if(k==='nieuws/elise-mertens'){
 h+=`<figure class="nw-fig"><img class="nw-banner" data-i="tm" alt="Elise Mertens"><figcaption>Elise Mertens. © epa</figcaption></figure><article class="nw-art"><span class="nw-cat">Persbericht · Mode</span><h1>Elise Mertens wordt het nieuwe gezicht van Hampton Bays</h1><p class="nw-sub">Toptennister kiest bewust voor Belgisch modemerk lang voor officiële ambassadeurschap.</p><div class="nw-by">Door Dylan Protasi · 6 oktober 2026 · 1 min lezen</div>
 <p><b>Deinze, 6 oktober 2026</b> – De Belgische toptennister Elise Mertens is door het modemerk Hampton Bays aangesteld als officiële ambassadrice. Ze wordt het gezicht van de komende spring/summer 2027-collectie. De samenwerking is vandaag bekendgemaakt en komt tot stand vanuit een reeds bestaande liefde van de tennister voor het kledingmerk.</p>
 <h3>Gedeelde liefde voor het merk</h3>
@@ -357,13 +398,13 @@ h+=`<figure class="nw-fig"><img class="nw-banner" data-i="tm" alt="Elise Mertens
 <div class="nw-note"><b>Noot voor de pers</b>Voor meer informatie kunt u terecht bij Daisy Plas (CEO van Hampton Bays) via <a href="mailto:daisyplas@hamptonbays.be">daisyplas@hamptonbays.be</a>.</div>
 <a class="nw-back2" href="#/nieuws">◀ Alle berichten</a></article>`;
 }else{
-h+=`<a class="nw-hero" href="#/nieuws/elise-mertens"><figure class="nw-fig2"><img data-i="tm" alt="Elise Mertens"><figcaption>Elise Mertens. © epa</figcaption></figure><div><span class="nw-cat">Persbericht · Mode</span><h2>Elise Mertens wordt het nieuwe gezicht van Hampton Bays</h2><p>Toptennister kiest bewust voor Belgisch modemerk lang voor officiële ambassadeurschap.</p><span class="nw-meta">Door Dylan Protasi · 6 oktober 2026</span></div></a><div class="nw-more">Meer persberichten en blogs volgen binnenkort.</div>`;
+h+=`<a class="nw-hero" href="#/nieuws/dior-american-psycho"><figure class="nw-fig2"><img class="nw-ct" data-i="dp1" alt="Dior Book Tote met de cover van American Psycho"><figcaption>Beeld: Dior</figcaption></figure><div><span class="nw-cat">Blog · Mode</span><h2>Dior zet American Psycho op een tas. Het internet vindt het “basic”.</h2><p>Zonder grote campagne of aankondiging bracht Dior een American Psycho-collectie uit.</p><span class="nw-meta">Door Dylan Protasi · 8 oktober 2026</span></div></a><a class="nw-hero" href="#/nieuws/elise-mertens"><figure class="nw-fig2"><img data-i="tm" alt="Elise Mertens"><figcaption>Elise Mertens. © epa</figcaption></figure><div><span class="nw-cat">Persbericht · Mode</span><h2>Elise Mertens wordt het nieuwe gezicht van Hampton Bays</h2><p>Toptennister kiest bewust voor Belgisch modemerk lang voor officiële ambassadeurschap.</p><span class="nw-meta">Door Dylan Protasi · 6 oktober 2026</span></div></a><div class="nw-more">Meer persberichten en blogs volgen binnenkort.</div>`;
 }
 h+='</main></div>';
 proj.innerHTML=h;[].forEach.call(proj.querySelectorAll('img[data-i]'),function(m){m.src=I[m.getAttribute('data-i')]});
 home.style.display='none';proj.style.display='';window.scrollTo(0,0)}
 </script>
-<script>var I={ab1:"img/ab1.jpg",ab2:"img/ab2.jpg",dwq:"img/dwq.jpg",brq:"img/brq.jpg",lhq:"img/lhq.jpg",r1:"img/r1.jpg",r2:"img/r2.jpg",r3:"img/r3.jpg",r4:"img/r4.jpg",r5:"img/r5.jpg",r6:"img/r6.jpg",m1:"img/m1.jpg",m2:"img/m2.jpg",m3:"img/m3.jpg",s1:"img/s1.jpg",s2:"img/s2.jpg",s3:"img/s3.jpg",s4:"img/s4.jpg",ban:"img/ban.jpg",lig:"img/lig.jpg",pro:"img/pro.jpg",spr:"img/spr.jpg",adv:"img/adv.jpg",tm:"img/tm.jpg"};</script>
+<script>var I={dp1:"img/dp1.jpg",dp2:"img/dp2.jpg",dp3:"img/dp3.jpg",ab1:"img/ab1.jpg",ab2:"img/ab2.jpg",dwq:"img/dwq.jpg",brq:"img/brq.jpg",lhq:"img/lhq.jpg",r1:"img/r1.jpg",r2:"img/r2.jpg",r3:"img/r3.jpg",r4:"img/r4.jpg",r5:"img/r5.jpg",r6:"img/r6.jpg",m1:"img/m1.jpg",m2:"img/m2.jpg",m3:"img/m3.jpg",s1:"img/s1.jpg",s2:"img/s2.jpg",s3:"img/s3.jpg",s4:"img/s4.jpg",ban:"img/ban.jpg",lig:"img/lig.jpg",pro:"img/pro.jpg",spr:"img/spr.jpg",adv:"img/adv.jpg",tm:"img/tm.jpg"};</script>
 <script>var V={backrooms:"video/backrooms.mp4",furious:"video/furious.mp4",dw:"video/dw.mp4",lh:"video/lh.mp4",kang:"video/kang.mp4",ts:"video/ts.mp4",car:"video/car.mp4",bb:"video/bb.mp4",esc:"video/esc.mp4",tv1:"video/tv1.mp4",tv2:"video/tv2.mp4",tv3:"video/tv3.mp4",tv4:"video/tv4.mp4",pk:"video/pk.mp4",jn:"video/jn.mp4",cs1:"video/cs1.mp4",cs2:"video/cs2.mp4",cs3:"video/cs3.mp4",cs4:"video/cs4.mp4"};</script>
 <script>
 var boot=document.getElementById('boot'),log=document.getElementById('log');
