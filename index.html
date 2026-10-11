@@ -308,6 +308,7 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 .nw-fig{max-width:1040px;margin:0 auto 34px!important}
 .nw-banner{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 30%;display:block;cursor:zoom-in}
 .nw-art{max-width:700px;margin:0 auto}
+.nw-art ul{font-size:19px;line-height:1.7;margin:0 0 20px;padding-left:22px}.nw-art li{margin-bottom:8px}
 .nw-art p{font-size:19px;line-height:1.75;margin:0 0 20px}
 .nw-art.dc>p:first-of-type::first-letter{float:left;font:500 92px/.76 var(--dd);padding:8px 12px 0 0}
 .nw-art h3{font:500 30px/1.12 var(--dd);letter-spacing:-.01em;margin:44px 0 12px}
@@ -488,8 +489,13 @@ var NB={'dior-american-psycho':`<figure class="nw-prod"><div class="nwp"><img da
 <h3>Natuurlijke match</h3>
 <p>Volgens het modemerk weerspiegelt de toptennister de identiteit van het label.</p>
 <blockquote>“Haar kleurrijke persoonlijkheid, moeiteloze elegantie en positieve energie maken haar een natuurlijke match voor ons merk.”<cite>Daisy Plas, CEO van Hampton Bays</cite></blockquote>
+<h3>Wat doet Elise als ambassadrice?</h3>
+<p>Als ambassadrice neemt Elise Mertens meerdere rollen op zich binnen de komende collectie:</p>
+<ul><li><b>Model voor het lookbook.</b> Ze staat zelf in beeld in het lookbook van de spring/summer 2027-collectie.</li><li><b>“Elise’s favorite item”.</b> Er komt een stuk uit de collectie dat zij persoonlijk uitkiest, onder die naam.</li></ul>
 <p>Het merk laat weten dat deze samenwerking nog maar de eerste stap is binnen de plannen voor het komende seizoen.</p>
-<div class="nw-note"><b>Noot voor de pers</b>Voor meer informatie kunt u terecht bij Daisy Plas (CEO van Hampton Bays) via <a href="mailto:daisyplas@hamptonbays.be">daisyplas@hamptonbays.be</a>.</div>`};
+<h3>Over Hampton Bays</h3>
+<p>Hampton Bays is een Belgisch modemerk, bekend om zijn casual en tijdloze dameskleding. Het merk werd opgericht in 1992 en biedt collecties die comfort en stijl combineren, met een focus op kwaliteit en draagbaarheid. Hampton Bays’ ontwerpen zijn vaak geïnspireerd door de ontspannen en elegante sfeer van de Amerikaanse oostkust, met een mix van klassieke en moderne invloeden.</p>
+<div class="nw-note"><b>Noot voor de pers</b>Voor meer informatie kunt u terecht bij Daisy Plas (CEO van Hampton Bays) via <a href="mailto:daisyplas@hamptonbays.be">daisyplas@hamptonbays.be</a> of op <a href="tel:+32486471249">+32 486 47 12 49</a>.</div>`};
 function nCard(p){return '<a class="nw-card" href="#/nieuws/'+p.id+'"><figure><img'+(p.ct?' class="nw-ct"':'')+' data-n="'+p.i+'" alt="'+p.a+'"><figcaption>'+p.cap+'</figcaption></figure><div><span class="nw-cat">'+NL[p.c]+' · '+p.cat+'</span><h3>'+p.t+'</h3><p>'+p.s+'</p><span class="nw-meta">Door Dylan Protasi · '+nd(p.d)+'</span></div></a>'}
 function newsView(k){
 if(!done)end();
