@@ -30,6 +30,7 @@ body{font:14px/1.4 var(--ui);color:#1d1d1f;overflow:hidden;background:#eceaf2;-w
 .dock{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:14px;padding:10px 16px;border-radius:22px;background:rgba(255,255,255,.45);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 0 0 1px rgba(255,255,255,.6) inset,0 10px 30px rgba(40,30,80,.15);z-index:10}
 .dock a,.dock button{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;border:0;cursor:pointer;color:#fff;transition:transform .2s;box-shadow:0 3px 8px rgba(0,0,0,.2)}
 .dock a:hover,.dock button:hover{transform:translateY(-8px) scale(1.12)}
+.dock .sep{width:1px;background:rgba(0,0,0,.18);margin:4px 2px}
 .dock svg{width:28px;height:28px}
 .ov{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:44px 12px 90px;background:rgba(30,25,50,.08)}
 .ov.on{display:flex}
@@ -73,9 +74,11 @@ body{font:14px/1.4 var(--ui);color:#1d1d1f;overflow:hidden;background:#eceaf2;-w
 <main class="desk" id="desk"></main>
 
 <nav class="dock" aria-label="Dock">
-<button style="background:linear-gradient(#f7d44a,#e9a521)" onclick="openW('over')" aria-label="Over mij" title="Over mij"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 4h12v16H6zM9 9h6M9 13h6M9 17h3"/></svg></button>
+<button style="background:linear-gradient(#fbe36a 0 26%,#fffdf2 26%)" onclick="openW('over')" aria-label="Notities: over mij" title="Notities · Over mij"><svg viewBox="0 0 24 24" fill="none" stroke="#b9b39a" stroke-width="1.6" stroke-linecap="round"><path d="M5 10h14M5 14h14M5 18h9"/></svg></button>
 <a href="mailto:dylan.protasi@gmail.com" style="background:linear-gradient(#52b8ff,#0a73ff)" aria-label="Mail" title="Mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg></a>
-<a href="index.html#/nieuws" style="background:linear-gradient(#444,#111)" aria-label="PR-OTASI" title="PR-OTASI"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M7 9h7M7 13h7"/></svg></a>
+<button style="background:linear-gradient(#8b8bf5,#4b3fd1)" onclick="openW('contact')" aria-label="Contact" title="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="9" r="3.5"/><path d="M5 20c1-4 4-5 7-5s6 1 7 5"/></svg></button>
+<span class="sep"></span>
+<a href="index.html#/nieuws" style="background:linear-gradient(#ff6a5f,#d62b2b)" aria-label="PR-OTASI" title="PR-OTASI (perssite)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M7 9h7M7 13h7"/></svg></a>
 <a href="index.html" style="background:linear-gradient(#5b6bff,#1b2a9a)" aria-label="Retro-versie" title="Retro-versie van de site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M9 20h6M12 16v4"/></svg></a>
 </nav>
 
@@ -84,39 +87,39 @@ body{font:14px/1.4 var(--ui);color:#1d1d1f;overflow:hidden;background:#eceaf2;-w
 <script>
 var E='dylan.protasi@gmail.com';
 var P=[
-{id:'kinepolis',l:'Kinepolis',t:'Kinepolis Film Distribution',sub:'Stage · Marketing assistent',th:'img/dwq.jpg',x:15,y:20,
+{id:'kinepolis',l:'Kinepolis',t:'Kinepolis Film Distribution',sub:'Stage · Marketing assistent',th:'img/th-kin.jpg',x:14,y:24,
  d:['Tijdens mijn stage bij Kinepolis Film Distribution nam ik de rol van marketingassistent op me. Ik hield me vooral bezig met het monteren van trailers en teasers en het grafisch ontwerpen van quizzes.','Daarnaast werkte ik aan contentkalenders, Excel, screening- en scriptanalyses en het bedenken van marketingcampagnes voor filmreleases. De campagne voor de film Backrooms nam ik grotendeels op mij.'],
  type:'Video-editing > Grafisch ontwerp',yr:'2026',tools:'Video-editing, grafisch ontwerp, Excel',
  pv:[['v','video/dw.mp4'],['v','video/furious.mp4'],['v','video/backrooms.mp4'],['i','img/dwq.jpg'],['i','img/brq.jpg'],['i','img/lhq.jpg']],link:'index.html#/kinepolis'},
-{id:'hampton',l:'Hampton Bays',t:'Hampton Bays',sub:'Stage · Belgisch modemerk',th:'img/elise-hb3.jpg',x:34,y:12,
+{id:'hampton',l:'Hampton Bays',t:'Hampton Bays',sub:'Stage · Belgisch modemerk',th:'img/m1.jpg',x:28,y:24,
  d:['Tijdens mijn stage bij het Belgische modemerk Hampton Bays was ik verantwoordelijk voor de volledige marketing, omdat er geen aparte marketingafdeling was.','Ik zorgde mee voor de sterke groei van het merk op sociale media en werkte aan grafisch ontwerp, Meta Ads, contentshoots en het creëren van beeldmateriaal met behulp van artificiële intelligentie.'],
  type:'Marketing > Content',yr:'2026',tools:'Meta Ads, grafisch ontwerp, AI-beeld, shoots',
  pv:[['i','img/m1.jpg'],['i','img/m2.jpg'],['i','img/m3.jpg'],['i','img/spr.jpg'],['i','img/adv.jpg']],g:1,link:'index.html#/hampton'},
-{id:'pinko',l:'PINKO',t:'PINKO',sub:'Dagstage · Fashion Masterclass',th:'img/pkm.jpg',x:56,y:14,
+{id:'pinko',l:'PINKO',t:'PINKO',sub:'Dagstage · Fashion Masterclass',th:'img/pkt1.jpg',x:14,y:44,
  d:['In oktober 2025 liep ik een dagstage op een trunkshow van PINKO in The Nine in Brussel, waar ik de content van de show opnam.','Daarnaast bedacht ik als eindopdracht voor het vak Fashion Masterclass een soft event voor de PINKO-winkels in België en de outlet in Roermond: The Fearless Confessional.'],
  type:'Content > Eventconcept',yr:'2025',tools:'Contentcreatie, eventconcept, socialemediastrategie',
  pv:[['i','img/pkm.jpg'],['i','img/pkt1.jpg'],['i','img/pkt3.jpg']],g:1,link:'index.html#/pinko'},
-{id:'disney',l:'Disney Winter Village',t:'Disney Winter Village',sub:'Bachelorproef · Concept & strategie',ty:'linear-gradient(160deg,#3a58c4,#0b1330)',x:80,y:20,
+{id:'disney',l:'Disney Winter Village',t:'Disney Winter Village',sub:'Bachelorproef · Concept & strategie',ty:'linear-gradient(160deg,#3a58c4,#0b1330)',x:28,y:44,
  d:['Voor mijn bachelorproef ontwikkelde ik een innovatief, transmediaal retailconcept voor Maasmechelen Village in samenwerking met Disney: Disney Winter Village. Het project combineert offline beleving met online engagement om de klassieke winkelervaring in het winterseizoen te transformeren.'],
  type:'Concept > Strategie',yr:'2026',tools:'Business Model Canvas, klantreis, Canva',pv:[],link:'index.html#/disney',ext:['Bekijk het concept','https://dylanprotasi.my.canva.site/']},
-{id:'fifth',l:'The Fifth',t:'Magazine The Fifth',sub:'Eindwerk jaar 2 · Magazine',ty:'linear-gradient(160deg,#e6dfd0,#b9ad94)',dark:1,x:88,y:46,
+{id:'fifth',l:'The Fifth',t:'Magazine The Fifth',sub:'Eindwerk jaar 2 · Magazine',ty:'linear-gradient(160deg,#e6dfd0,#b9ad94)',dark:1,x:86,y:24,
  d:['In mijn tweede jaar kregen we als eindwerk de opdracht om een eigen magazine te ontwikkelen. Zo ontstond The Fifth.'],
  type:'Redactie > Lay-out',yr:'2025',tools:'Redactie, lay-out',pv:[],link:'index.html#/fifth',ext:['Lees het magazine','https://drive.google.com/file/d/1V0Qgv0Xyy_nr-jYsvsraxb35QqaAKkbN/view?usp=sharing']},
-{id:'ioan',l:'IOAN',t:'IOAN — Sun Set 50',sub:'Fictieve campagne',th:'img/s1.jpg',x:70,y:58,
+{id:'ioan',l:'IOAN',t:'IOAN — Sun Set 50',sub:'Fictieve campagne',th:'img/s2.jpg',x:14,y:64,
  d:['Deze fictieve campagne voor de Sun Set 50 van IOAN is een cinematografische grooming-productie op een luxueus Mediterraans zwembaddek tijdens golden hour.','Het concept focust op moeiteloze, onzichtbare zonbescherming en huidverzorging voor een actieve levensstijl, met een zongekust mannelijk model als middelpunt.'],
  type:'AI-beeld > Campagne',yr:'2026',tools:'AI-beeld, Adobe Express',
  pv:[['i','img/s1.jpg'],['i','img/s2.jpg'],['i','img/s3.jpg'],['i','img/s4.jpg']],g:1,link:'index.html#/ioan'},
-{id:'rhode',l:'Rhode',t:'Rhode — Peptide Lip Boost',sub:'Fictieve campagne',th:'img/r1.jpg',x:12,y:50,
+{id:'rhode',l:'Rhode',t:'Rhode — Peptide Lip Boost',sub:'Fictieve campagne',th:'img/r2.jpg',x:28,y:64,
  d:['Voor deze conceptuele reclame ontwikkelde ik een campagne voor mannen rond ruwe schoonheid voor Rhode, met de Peptide Lip Boost als cultfavoriet.','In plaats van de overgeproduceerde, steriele studio-esthetiek koos ik bewust voor een authentieke winterlook die ook bij de esthetiek van het merk past.'],
  type:'AI-beeld > Campagne',yr:'2026',tools:'AI-beeld, Adobe Express',
  pv:[['i','img/r1.jpg'],['i','img/r2.jpg'],['i','img/r3.jpg'],['i','img/r4.jpg'],['i','img/r5.jpg'],['i','img/r6.jpg']],g:1,link:'index.html#/rhode'},
-{id:'pr',l:'PR-OTASI',t:'PR-OTASI (perssite)',sub:'Persberichten & blog',th:'img/elise-hb3.jpg',x:34,y:66,
+{id:'pr',l:'PR-OTASI',t:'PR-OTASI (perssite)',sub:'Persberichten & blog',th:'img/elise-hb3.jpg',x:72,y:24,
  d:['Mijn eigen perssite, met als eerste persbericht: Elise Mertens wordt het nieuwe gezicht van Hampton Bays.'],
  type:'Schrijven > PR',yr:'2026',tools:'Persbericht, redactie',pv:[['i','img/elise-hb3.jpg']],link:'index.html#/nieuws/elise-mertens'},
-{id:'over',l:'Over mij',t:'Over mij',sub:'Dylan Protasi · Liedekerke',th:'img/ab1.jpg',x:56,y:72,
+{id:'over',l:'Over mij',t:'Over mij',sub:'Dylan Protasi · Liedekerke',th:'img/ab1.jpg',x:72,y:44,
  d:['Ik ben Dylan, een creatieve en leergierige jongen met een passie voor media, fashion en de filmindustrie. Ik hou mij vooral bezig met grafisch ontwerp, conceptontwikkeling en video-editing. Ik combineer creatief denken met een scherp inzicht in doelgroepgericht werken, zowel zelfstandig als in teamverband.','So I hope you enjoy wat ik allemaal al heb gemaakt ;)'],
  type:'Profiel',yr:'',tools:'',pv:[['i','img/ab1.jpg'],['i','img/ab2.jpg']],g:1},
-{id:'contact',l:'Contact',t:'Contact',sub:'Zeg gerust hallo',ty:'linear-gradient(160deg,#52b8ff,#0a73ff)',x:88,y:74,
+{id:'contact',l:'Contact',t:'Contact',sub:'Zeg gerust hallo',ty:'linear-gradient(160deg,#52b8ff,#0a73ff)',x:86,y:44,
  d:['E-mail: '+E],type:'Contact',yr:'',tools:'',pv:[],mail:1}
 ];
 var desk=document.getElementById('desk'),ov=document.getElementById('ov'),w=document.getElementById('w');
