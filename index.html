@@ -49,6 +49,8 @@ a.win:hover{border-color:var(--acc);transform:translate(-3px,-3px);box-shadow:5p
 .stats .in span{color:var(--mut);font-size:13px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
 .big{grid-column:1/-1}
+.bnr{aspect-ratio:16/9;overflow:hidden;border-bottom:2px solid var(--line);background:rgba(0,0,0,.08)}.bnr img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}.pc:hover .bnr img{transform:scale(1.04)}
+@media(min-width:760px){.big{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto 1fr}.big .bar{grid-column:1/-1}.big .bnr{border-bottom:0;border-right:2px solid var(--line);aspect-ratio:auto}}
 .win h3{font:400 30px/1.1 VT323,monospace;margin:0 0 8px;color:#fff}
 .win p{margin:0 0 14px;color:var(--mut);font-size:14px}
 .chips{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}
@@ -393,6 +395,7 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 <p class="sub">Content &amp; marketing voor fashion en film</p>
 <ul class="items" id="items">
 <li><a href="#werk" class="on">Werk</a></li>
+<li><a href="#fictief">Fictief werk</a></li>
 <li><a href="#/nieuws">PR-OTASI (perssite)</a></li>
 <li><a href="#over">Over mij</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -407,14 +410,20 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 <section id="werk">
 <div class="ch">HOOFDSTUK 01</div><h2>Werk</h2>
 <div class="grid">
-<a class="win big pc t-kinepolis" href="#/kinepolis"><div class="bar"><span>KINEPOLIS.MOV</span><span>2026</span></div><div class="in"><h3>Kinepolis Film Distribution</h3><p>Stage als marketingassistent: trailers en teasers gemonteerd (The Strangers: Chapter 3, Kangaroo, Deep Water), quizzes ontworpen, contentkalenders beheerd, screening- en scriptanalyses gemaakt en de campagne voor de film Backrooms opgezet.</p><div class="chips"><i>Video-editing</i><i>Campagnes</i><i>Contentkalender</i></div><div class="go">▶ Afspelen</div></div></a>
-<a class="win pc t-hampton" href="#/hampton"><div class="bar"><span>HAMPTON_BAYS</span><span>2026</span></div><div class="in"><h3>Hampton Bays</h3><p>Volledige marketing van een modemerk zonder marketingafdeling: socials, Meta Ads, shoots en AI-beeld.</p><div class="chips"><i>Meta Ads</i><i>Shoots</i><i>AI</i></div><div class="go">▶ Afspelen</div></div></a>
-<a class="win pc t-pinko" href="#/pinko"><div class="bar"><span>PINKO</span><span>2025</span></div><div class="in"><h3>PINKO</h3><p>Dagstage op een trunkshow in Brussel, waar ik de content opnam, en een eventconcept als eindopdracht: The Fearless Confessional.</p><div class="chips"><i>Content</i><i>Eventconcept</i><i>Retail</i></div><div class="go">▶ Afspelen</div></div></a>
-<a class="win pc t-disney" href="#/disney"><div class="bar"><span>BACHELORPROEF</span><span>2026</span></div><div class="in"><h3>Disney Winter Village</h3><p>Transmediaal retailconcept voor Maasmechelen Village, met businessmodel en klantreis.</p><div class="chips"><i>Concept</i><i>Strategie</i></div><div class="go">▶ Afspelen</div></div></a>
-<a class="win pc t-rhode" href="#/rhode"><div class="bar"><span>RHODE.FICTIEF</span><span>2026</span></div><div class="in"><h3>Rhode — Lip Boost</h3><p>Ruwe winterlook voor mannen i.p.v. steriele studio-esthetiek. Volledig met AI gemaakt.</p><div class="chips"><i>AI</i><i>Art direction</i></div><div class="go">▶ Afspelen</div></div></a>
-<a class="win pc t-xmas" href="#/rhode-xmas"><div class="bar"><span>RHODE_XMAS.FICTIEF</span><span>2026</span></div><div class="in"><h3>Rhode — Christmas Edit</h3><p>Fictieve kerstcampagne: candy cane-tubes, gingerbread en een kerstboomdoos met rode strik.</p><div class="chips"><i>Campagne</i><i>Art direction</i></div><div class="go">▶ Afspelen</div></div></a>
-<a class="win pc t-ioan" href="#/ioan"><div class="bar"><span>IOAN.FICTIEF</span><span>2026</span></div><div class="in"><h3>IOAN — Sun Set 50</h3><p>Cinematografische grooming-productie tijdens golden hour. Editorial meets skincare.</p><div class="chips"><i>AI</i><i>Editorial</i></div><div class="go">▶ Afspelen</div></div></a>
-<a class="win pc t-fifth" href="#/fifth"><div class="bar"><span>THE_FIFTH.PDF</span><span>2025</span></div><div class="in"><h3>The Fifth</h3><p>Eigen magazine als eindwerk van jaar 2, van concept tot lay-out.</p><div class="chips"><i>Ontwerp</i><i>Redactie</i></div><div class="go">▶ Lezen</div></div></a>
+<a class="win big pc t-kinepolis" href="#/kinepolis"><div class="bar"><span>KINEPOLIS.MOV</span><span>2026</span></div><div class="bnr"><img src="img/bn-kinepolis.jpg" alt="" loading="lazy"></div><div class="in"><h3>Kinepolis Film Distribution</h3><p>Stage als marketingassistent: trailers en teasers gemonteerd (The Strangers: Chapter 3, Kangaroo, Deep Water), quizzes ontworpen, contentkalenders beheerd, screening- en scriptanalyses gemaakt en de campagne voor de film Backrooms opgezet.</p><div class="chips"><i>Video-editing</i><i>Campagnes</i><i>Contentkalender</i></div><div class="go">▶ Afspelen</div></div></a>
+<a class="win pc t-hampton" href="#/hampton"><div class="bar"><span>HAMPTON_BAYS</span><span>2026</span></div><div class="bnr"><img src="img/bn-hampton.jpg" alt="" loading="lazy"></div><div class="in"><h3>Hampton Bays</h3><p>Volledige marketing van een modemerk zonder marketingafdeling: socials, Meta Ads, shoots en AI-beeld.</p><div class="chips"><i>Meta Ads</i><i>Shoots</i><i>AI</i></div><div class="go">▶ Afspelen</div></div></a>
+<a class="win pc t-pinko" href="#/pinko"><div class="bar"><span>PINKO</span><span>2025</span></div><div class="bnr"><img src="img/bn-pinko.jpg" alt="" loading="lazy"></div><div class="in"><h3>PINKO</h3><p>Dagstage op een trunkshow in Brussel, waar ik de content opnam, en een eventconcept als eindopdracht: The Fearless Confessional.</p><div class="chips"><i>Content</i><i>Eventconcept</i><i>Retail</i></div><div class="go">▶ Afspelen</div></div></a>
+<a class="win pc t-disney" href="#/disney"><div class="bar"><span>BACHELORPROEF</span><span>2026</span></div><div class="bnr"><img src="img/bn-disney.jpg" alt="" loading="lazy"></div><div class="in"><h3>Disney Winter Village</h3><p>Transmediaal retailconcept voor Maasmechelen Village, met businessmodel en klantreis.</p><div class="chips"><i>Concept</i><i>Strategie</i></div><div class="go">▶ Afspelen</div></div></a>
+<a class="win pc t-fifth" href="#/fifth"><div class="bar"><span>THE_FIFTH.PDF</span><span>2025</span></div><div class="bnr"><img src="img/bn-fifth.jpg" alt="" loading="lazy"></div><div class="in"><h3>The Fifth</h3><p>Eigen magazine als eindwerk van jaar 2, van concept tot lay-out.</p><div class="chips"><i>Ontwerp</i><i>Redactie</i></div><div class="go">▶ Lezen</div></div></a>
+</div>
+</section>
+
+<section id="fictief">
+<div class="ch">HOOFDSTUK 02</div><h2>Fictief werk</h2>
+<div class="grid">
+<a class="win pc t-xmas" href="#/rhode-xmas"><div class="bar"><span>RHODE_XMAS.FICTIEF</span><span>2026</span></div><div class="bnr"><img src="img/bn-rhode-xmas.jpg" alt="" loading="lazy"></div><div class="in"><h3>Rhode — Christmas Edit</h3><p>Fictieve kerstcampagne: candy cane-tubes, gingerbread en een kerstboomdoos met rode strik.</p><div class="chips"><i>Campagne</i><i>Art direction</i></div><div class="go">▶ Afspelen</div></div></a>
+<a class="win pc t-rhode" href="#/rhode"><div class="bar"><span>RHODE.FICTIEF</span><span>2026</span></div><div class="bnr"><img src="img/bn-rhode.jpg" alt="" loading="lazy"></div><div class="in"><h3>Rhode — Lip Boost</h3><p>Ruwe winterlook voor mannen i.p.v. steriele studio-esthetiek. Volledig met AI gemaakt.</p><div class="chips"><i>AI</i><i>Art direction</i></div><div class="go">▶ Afspelen</div></div></a>
+<a class="win pc t-ioan" href="#/ioan"><div class="bar"><span>IOAN.FICTIEF</span><span>2026</span></div><div class="bnr"><img src="img/bn-ioan.jpg" alt="" loading="lazy"></div><div class="in"><h3>IOAN — Sun Set 50</h3><p>Cinematografische grooming-productie tijdens golden hour. Editorial meets skincare.</p><div class="chips"><i>AI</i><i>Editorial</i></div><div class="go">▶ Afspelen</div></div></a>
 </div>
 </section>
 
@@ -422,7 +431,7 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 <div id="bn"></div></section>
 
 <section id="over">
-<div class="ch">HOOFDSTUK 02</div><h2>Over mij</h2>
+<div class="ch">HOOFDSTUK 03</div><h2>Over mij</h2>
 <div class="jg" id="abph" style="margin-bottom:20px"></div>
 <div class="two">
 <div class="win"><div class="bar"><span>README.TXT</span><span>_ □</span></div><div class="in"><p>Ik ben Dylan, een creatieve en leergierige jongen met een passie voor media, fashion en de filmindustrie. Ik hou mij vooral bezig met grafisch ontwerp, conceptontwikkeling en video-editing. Ik combineer creatief denken met een scherp inzicht in doelgroepgericht werken, zowel zelfstandig als in teamverband.</p><p>So I hope you enjoy wat ik allemaal al heb gemaakt ;)</p></div></div>
@@ -431,7 +440,7 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 </section>
 
 <section id="contact">
-<div class="ch">HOOFDSTUK 03</div><h2>Contact</h2>
+<div class="ch">HOOFDSTUK 04</div><h2>Contact</h2>
 <p>Op zoek naar iemand voor marketing, content of fashion?</p>
 <p class="vt" style="font-size:32px;margin:6px 0 10px"><a href="mailto:dylan.protasi@gmail.com">dylan.protasi@gmail.com</a></p>
 <a class="btn" href="mailto:dylan.protasi@gmail.com">▶ Stuur bericht</a>
@@ -564,7 +573,7 @@ home.style.display='none';proj.style.display='';window.scrollTo(0,0)}
 <script>var V={pks:"video/pks.mp4",pkb:"video/pkb.mp4",backrooms:"video/backrooms.mp4",furious:"video/furious.mp4",dw:"video/dw.mp4",lh:"video/lh.mp4",kang:"video/kang.mp4",ts:"video/ts.mp4",car:"video/car.mp4",bb:"video/bb.mp4",esc:"video/esc.mp4",tv1:"video/tv1.mp4",tv2:"video/tv2.mp4",tv3:"video/tv3.mp4",tv4:"video/tv4.mp4",pk:"video/pk.mp4",jn:"video/jn.mp4",cs1:"video/cs1.mp4",cs2:"video/cs2.mp4",cs3:"video/cs3.mp4",cs4:"video/cs4.mp4"};</script>
 <script>
 var boot=document.getElementById('boot'),log=document.getElementById('log');
-var lines=['DYLAN_OS v1.0','Geheugen controleren... OK','Portfolio laden... 6 projecten gevonden','Disc inlezen...','> start menu'];
+var lines=['DYLAN_OS v1.0','Geheugen controleren... OK','Portfolio laden... 8 projecten gevonden','Disc inlezen...','> start menu'];
 var done=false,i=0;
 function end(){if(done)return;done=true;boot.classList.add('off');setTimeout(function(){boot.style.display='none'},600)}
 function next(){if(done)return;if(i<lines.length){log.innerHTML+=lines[i++]+'<br>';setTimeout(next,380)}else setTimeout(end,500)}
