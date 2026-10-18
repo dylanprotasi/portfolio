@@ -1,0 +1,96 @@
+/* Retro-tv met afstandsbediening als startscherm */
+body.tvr{overflow:hidden}
+body.tvr:after{display:none}
+#tvroom{position:fixed;inset:0;z-index:45;display:none;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(120% 90% at 40% 45%,#14294d 0,#0a1428 60%,#050912 100%);color:#fff;user-select:none;-webkit-user-select:none;touch-action:manipulation;font-family:'IBM Plex Mono','Courier New',monospace}
+.tvs{position:relative;flex:none;width:min(100vw,177.78vh);aspect-ratio:16/9;container-type:size;transition:transform .8s cubic-bezier(.65,0,.35,1)}
+.tvs.nt{transition:none}
+.tvs .wall{position:absolute;inset:0;background:radial-gradient(60% 55% at 40% 48%,rgba(80,140,255,.16),transparent 70%),radial-gradient(circle,rgba(255,255,255,.05) .12cqw,transparent .14cqw) 0 0/1.6cqw 1.6cqw,linear-gradient(#10203d,#0a1528)}
+.tvs .tbl{position:absolute;left:0;right:0;top:90cqh;bottom:0;background:linear-gradient(#2b1d17,#150e0b);box-shadow:0 -.3cqw 1cqw rgba(0,0,0,.5)}
+.pst{position:absolute;background:#e9e2cf;padding:.5cqw;box-shadow:.3cqw .5cqw 1.2cqw rgba(0,0,0,.5)}
+.pst img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.85)}
+.pst.p1{left:8cqw;top:3cqh;width:19cqw;height:11cqw;transform:rotate(-2deg)}
+.pst.p2{left:32cqw;top:2cqh;width:17cqw;height:10cqw;transform:rotate(1.5deg)}
+.led{position:absolute;left:54cqw;top:8cqh;width:18cqw;height:6.2cqw;border-radius:3.1cqw;background:linear-gradient(#25080c,#12060a);border:.3cqw solid #5a1a22;box-shadow:0 .4cqw 1cqw rgba(0,0,0,.5);z-index:2;display:flex;align-items:center;justify-content:center}
+.led canvas{width:88%;height:78%}
+.rtv{position:absolute;left:6cqw;top:17cqh;width:68cqw;height:37.4cqw;border-radius:1.6cqw;background:linear-gradient(#3c3c42,#252528 10%,#1c1c1f 90%,#101012);box-shadow:0 1.2cqw 3cqw rgba(0,0,0,.65),inset 0 .15cqw 0 #5e5e66,inset 0 -.25cqw 0 #060607}
+.rtv .bz{position:absolute;left:2.2%;top:4.4%;width:72%;height:91%;border-radius:2.2cqw;background:#0f0f11;box-shadow:inset 0 0 .8cqw #000,0 .1cqw 0 #4a4a50}
+.rscr{position:absolute;inset:.9cqw;border-radius:3.2cqw/2.8cqw;overflow:hidden;background:linear-gradient(#0a0e15,#06080c);container-type:inline-size}
+.rscr .rtx{position:absolute;inset:0;padding:5.5% 6%;font-size:calc(100cqw/30);line-height:1.32;color:#e8f2ff;text-shadow:0 0 .35em rgba(150,200,255,.7);opacity:0;white-space:pre}
+.rscr.lit{background:radial-gradient(120% 110% at 50% 45%,#16346a,#0a1b3b 70%,#071228)}
+.rscr.lit .rtx{opacity:1}
+.rscr.lit{animation:tvon .55s ease-out}
+@keyframes tvon{0%{transform:scaleY(.02);filter:brightness(4)}40%{transform:scaleY(.03) scaleX(1);filter:brightness(3)}100%{transform:none;filter:none}}
+.rscr:before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px),radial-gradient(130% 120% at 50% 50%,transparent 55%,rgba(0,0,0,.65))}
+.rscr:after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(125deg,rgba(255,255,255,.14),rgba(255,255,255,.02) 35%,transparent 50%);border-radius:inherit}
+.rscr.fk{animation:fk .22s linear}
+@keyframes fk{0%{filter:brightness(2.2);transform:translateX(-.4%)}50%{filter:brightness(1.4);transform:translateX(.5%)}100%{filter:none;transform:none}}
+.rtx .hd{color:#9fd0ff;margin-bottom:.9em}
+.rtx .it{margin:0 -2% .4em;padding:.05em 2%;color:#b6c8e4;opacity:.78}
+.rtx .it small{display:block;font-size:.82em;padding-left:5.4em;color:#9db4d6;line-height:1.25;white-space:pre}
+.rtx .it.lit{color:#fff;opacity:1;background:rgba(170,210,255,.18);box-shadow:inset .2em 0 0 #ffd36b}
+.rtx .it.lit small{color:#d8e8ff}
+.rtx .cu{display:inline-block;width:1.3em}
+.rtx .it.lit .cu{animation:bl 1s steps(2) infinite}
+.rtx .ft{position:absolute;left:6%;right:6%;bottom:4.5%;font-size:.72em;color:#7f9cc7;display:flex;justify-content:space-between}
+.rtx .bt{white-space:normal}
+.rtv .pnl{position:absolute;left:76%;top:4.4%;width:21%;height:91%;border-radius:1.1cqw;background:linear-gradient(#1a1a1d,#141416);box-shadow:inset 0 0 .6cqw #000;display:flex;flex-direction:column;align-items:center;justify-content:space-around;padding:6% 0}
+.pnl .kb{display:block;width:5.4cqw;height:5.4cqw;border-radius:50%;background:radial-gradient(circle at 35% 30%,#6a6a72,#2b2b30 60%,#111);box-shadow:0 .3cqw .6cqw #000,inset 0 0 0 .35cqw #3a3a40;position:relative;transition:transform .5s}
+.pnl .kb:after{content:"";position:absolute;left:50%;top:14%;width:.5cqw;height:36%;margin-left:-.25cqw;background:#ddd;border-radius:.2cqw}
+.pnl .vent{width:80%;height:5cqw;background:repeating-linear-gradient(0deg,#050506 0 .35cqw,#2a2a2e .35cqw .7cqw);border-radius:.3cqw}
+.pnl .sld{width:.9cqw;height:9cqw;background:#050506;border-radius:.5cqw;position:relative;box-shadow:0 0 0 .3cqw #333}
+.pnl .sld b{position:absolute;left:-.8cqw;width:2.5cqw;height:1.6cqw;border-radius:.4cqw;background:linear-gradient(#f3f3f3,#aaa);top:0;transition:top .3s}
+.pnl .lt{width:1cqw;height:1cqw;border-radius:50%;background:#401010;box-shadow:0 0 0 .2cqw #222}
+.pnl .lt.lit{background:#ff3b30;box-shadow:0 0 1cqw #ff3b30}
+.vcr{position:absolute;left:9cqw;top:83cqh;width:62cqw;height:5.4cqw;border-radius:.6cqw;background:linear-gradient(#34343a,#1b1b1e);box-shadow:0 .5cqw 1.4cqw rgba(0,0,0,.6);display:flex;align-items:center;gap:2cqw;padding:0 2cqw}
+.vcr .pb{width:2.6cqw;height:2.6cqw;border-radius:50%;border:.2cqw solid #555;background:#202024;display:flex;align-items:center;justify-content:center;font-size:1.3cqw;color:#bbb}
+.vcr .sl{flex:1;height:1.8cqw;background:#050506;border-radius:.3cqw;box-shadow:inset 0 0 .4cqw #000}
+.vcr .dp{font:1.4cqw/1 'VT323',monospace;color:#7dff9a;text-shadow:0 0 .6cqw #7dff9a;width:7cqw;text-align:right}
+.rem{position:absolute;right:3cqw;top:30cqh;width:min(16.5cqw,31cqh);aspect-ratio:1/2.25;font-size:calc(min(16.5cqw,31cqh)/17);transform:rotate(-5deg);border-radius:2.4em;background:linear-gradient(160deg,#35353b,#1b1b1f 60%,#121214);border:.14em solid #4b4b52;box-shadow:.6em 1.2em 2.4em rgba(0,0,0,.7),inset 0 .15em 0 #5a5a62;padding:1.5em 1.3em;display:flex;flex-direction:column;align-items:center;gap:1.1em;z-index:5}
+.rem button{font-family:inherit;cursor:pointer;color:#e8e8ee;border:0;background:linear-gradient(#4a4a52,#2d2d33);box-shadow:0 .25em 0 #0c0c0e,0 .4em .6em rgba(0,0,0,.5),inset 0 .1em 0 rgba(255,255,255,.2);transition:transform .08s,box-shadow .08s;-webkit-tap-highlight-color:transparent;font-weight:700}
+.rem button:active,.rem button.pr{transform:translateY(.2em);box-shadow:0 .05em 0 #0c0c0e,inset 0 .1em 0 rgba(255,255,255,.15)}
+.rem .top{width:100%;display:flex;align-items:center;justify-content:space-between}
+.rem .ir{width:3.2em;height:1em;border-radius:.5em;background:#2a0a0c;box-shadow:inset 0 0 .3em #000}
+.rem .pw{width:3em;height:3em;border-radius:50%;background:linear-gradient(#ff5a4d,#c0281d);font-size:1.15em}
+.rem .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:.8em;width:100%}
+.rem .nums button{height:2.6em;border-radius:.8em;font-size:1.05em}
+.rem .dp{position:relative;width:11em;height:11em;border-radius:50%;background:linear-gradient(#222226,#18181b);box-shadow:inset 0 0 .6em #000;flex:none}
+.rem .dp button{position:absolute;width:3.8em;height:3.8em;border-radius:1em;font-size:1em}
+.rem .dp .up{left:3.6em;top:.2em}.rem .dp .dn{left:3.6em;bottom:.2em}.rem .dp .lf{left:.2em;top:3.6em}.rem .dp .rt{right:.2em;top:3.6em}
+.rem .dp .ok{left:3.5em;top:3.5em;width:4em;height:4em;border-radius:50%;background:linear-gradient(#ffd36b,#d49a1c);color:#2a1a00;font-size:1.05em}
+.rem .row{display:flex;gap:.8em;width:100%}
+.rem .row button{flex:1;height:2.4em;border-radius:1.2em;font-size:.9em;letter-spacing:.05em}
+.rem .brand{margin-top:auto;font-size:.8em;letter-spacing:.3em;color:#777}
+.hnt{position:absolute;right:3cqw;top:21cqh;width:17cqw;text-align:center;font-size:1.15cqw;line-height:1.3;color:#ffd36b;text-shadow:0 0 .8em rgba(255,200,90,.6);animation:bl 1.2s steps(2) infinite;pointer-events:none;transition:opacity .3s}
+.hnt.hide{opacity:0;animation:none}
+.tvfl{position:absolute;inset:0;background:#cfe4ff;opacity:0;pointer-events:none;transition:opacity .25s;z-index:9}
+.tvfl.lit{opacity:1}
+/* tv-stijl op volledig scherm */
+#crt{position:fixed;inset:7px;border-radius:34px/28px;box-shadow:0 0 0 100vmax #09090c,inset 0 0 90px rgba(0,0,0,.55),inset 0 0 0 3px #1d1d22;outline:3px solid #2a2a30;pointer-events:none;z-index:90000;display:none}
+#crt:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(125deg,rgba(255,255,255,.07),transparent 28%)}
+body.tvfull #crt{display:block;animation:crton .5s ease-out}
+@keyframes crton{0%{box-shadow:0 0 0 100vmax #09090c,inset 0 0 0 100vmax #cfe4ff}100%{box-shadow:0 0 0 100vmax #09090c,inset 0 0 90px rgba(0,0,0,.55),inset 0 0 0 3px #1d1d22}}
+#tvbtn{position:fixed;right:24px;bottom:22px;z-index:90001;display:none;font:500 15px 'IBM Plex Mono',monospace;color:#fff;background:linear-gradient(#3a3a41,#232327);border:1px solid #55555c;border-radius:22px;padding:8px 16px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.5);letter-spacing:.04em}
+#tvbtn:hover{background:linear-gradient(#ffd36b,#d49a1c);color:#2a1a00}
+body.tvfull #tvbtn{display:block}
+@keyframes bl{50%{opacity:.25}}
+/* staand (gsm) */
+@media(max-aspect-ratio:1/1){
+.tvs{width:100%;height:100%;aspect-ratio:auto}
+.tvs .tbl{top:88cqh}
+.pst.p1{left:5cqw;top:2.5cqh;width:42cqw;height:24cqw}
+.pst.p2{left:52cqw;top:3cqh;width:42cqw;height:24cqw}
+.led{left:56cqw;top:11cqh;width:38cqw;height:12cqw;border-radius:6cqw}
+.rtv{left:2cqw;top:15cqh;width:96cqw;height:94cqw;border-radius:3cqw}
+.rtv .bz{left:3%;top:3%;width:94%;height:73%;border-radius:4cqw}
+.rscr{inset:1.8cqw;border-radius:7cqw/6cqw}
+.rtv .pnl{left:3%;top:79%;width:94%;height:17%;flex-direction:row;padding:0 4%;border-radius:2.5cqw}
+.pnl .kb{width:11cqw;height:11cqw}
+.pnl .vent{width:20%;height:9cqw}
+.pnl .sld{width:9cqw;height:1.8cqw}
+.pnl .sld b{width:3cqw;height:4cqw;left:0;top:-1.1cqw;transition:left .3s}
+.pnl .lt{width:2.4cqw;height:2.4cqw}
+.vcr{display:none}
+.rem{right:auto;left:auto;top:auto;bottom:1.5cqh;right:3cqw;width:min(40cqw,17cqh);font-size:calc(min(40cqw,17cqh)/17)}
+.hnt{right:auto;left:3cqw;top:auto;bottom:14cqh;width:50cqw;font-size:4cqw}
+}
+@media(max-width:640px){#tvbtn{right:14px;bottom:14px;font-size:13px;padding:7px 12px}}
