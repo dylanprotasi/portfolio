@@ -1,5 +1,6 @@
 /* Retro-tv + afstandsbediening: startscherm van het portfolio */
 (function(){
+if(window.TV3)return;
 function lang(){try{return localStorage.getItem('lang')==='en'?'en':'nl'}catch(e){return 'nl'}}
 function T(a){return lang()==='en'?a[1]:a[0]}
 function store(k,v){try{if(v===undefined)return sessionStorage.getItem(k);sessionStorage.setItem(k,v)}catch(e){}}
