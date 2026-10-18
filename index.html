@@ -27,7 +27,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;back
 @keyframes bx{to{left:calc(100% - 120px)}}
 @keyframes by{to{top:calc(100% - 64px)}}
 .disc{position:relative;font:22px VT323,monospace;color:var(--acc);letter-spacing:.2em}
-#menu h1{position:relative;font:400 clamp(56px,13vw,150px)/.9 VT323,monospace;margin:10px 0 8px;text-shadow:4px 4px 0 #000,0 0 24px rgba(120,160,255,.6);letter-spacing:.02em}
+#menu h1{position:relative;font:400 clamp(52px,min(9vw,17vh),120px)/.9 VT323,monospace;margin:10px 0 8px;text-shadow:4px 4px 0 #000,0 0 24px rgba(120,160,255,.6);letter-spacing:.02em}
 .sub{position:relative;font:24px VT323,monospace;color:var(--mut);margin:0 0 36px}
 .items{position:relative;list-style:none;padding:0;margin:0;font:clamp(30px,5vw,44px)/1.25 VT323,monospace}
 .items a{text-decoration:none;display:inline-block;padding:0 14px 0 34px;position:relative;color:var(--fg)}
@@ -97,6 +97,36 @@ footer{margin-top:90px;border-top:2px solid var(--line);padding:24px 22px 40px;t
 @media(max-width:860px){.tv{position:relative;right:auto;top:auto;transform:none;width:100%;max-width:420px;margin:28px 0 0}}
 .scr video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;display:none}
 .scr.vid video{display:block}.scr.vid .ttl{display:none}
+/* CRT-scherm: het hele menu is een echt beeldscherm met trailers en beelden */
+#menu{--bz:clamp(8px,1.6vmin,22px)}
+.tv{position:absolute;inset:0;transform:none;width:auto;max-width:none;margin:0;padding:0;border:0;border-radius:0;background:#000;box-shadow:none;z-index:0}
+.tv:hover{border-color:transparent}
+.scr{aspect-ratio:auto;height:100%;border-radius:0;box-shadow:none;background:var(--c,radial-gradient(circle,#27407f,#0a1233))}
+.scr video{object-fit:contain;object-position:80% 50%}.scr.cov video{object-fit:cover;object-position:50% 50%}
+.scr img#tvi{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:80% 50%;display:none;z-index:1}
+.scr.im img#tvi{display:block;animation:kb 9s ease-out both}.scr.im.land img#tvi{object-fit:cover;object-position:50% 50%}
+.scr.im::before{content:"";position:absolute;inset:-30px;background:var(--bgi) center/cover;filter:blur(26px) brightness(.55) saturate(1.2);z-index:0}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
+.scr .dim{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(3,8,40,.82) 0,rgba(3,8,40,.55) 42%,rgba(3,8,40,.12) 78%,rgba(3,8,40,.3) 100%)}
+.scr .fx{position:absolute;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.26) 0 1px,transparent 1px 3px);animation:flk 4s steps(2) infinite}
+.scr .fx:after{content:"";position:absolute;left:0;right:0;height:22%;top:-25%;background:linear-gradient(transparent,rgba(255,255,255,.06),transparent);animation:roll 8s linear infinite}
+@keyframes flk{50%{opacity:.82}}@keyframes roll{to{top:110%}}
+.scr .osd,.scr .rec,.scr .ttl{z-index:4}
+.scr .osd{left:auto;right:calc(var(--bz) + 5vmin);top:calc(var(--bz) + 11vmin)}
+.scr .rec{left:auto;right:calc(var(--bz) + 5vmin);bottom:calc(var(--bz) + 12vmin)}
+.scr .ttl{position:absolute;display:block;right:calc(var(--bz) + 5vmin);bottom:calc(var(--bz) + 16vmin);text-align:right;font-size:clamp(26px,3.4vw,50px);padding:0;max-width:44vw}
+.scr.vid .ttl{display:block}
+.bezel{position:absolute;inset:var(--bz);border-radius:5vmin/6vmin;box-shadow:0 0 0 200vmax #000,inset 0 0 7vmin 1.5vmin rgba(0,0,0,.8);filter:blur(1.1px);pointer-events:none;z-index:5}
+.glass{position:absolute;inset:var(--bz);border-radius:5vmin/6vmin;background:radial-gradient(ellipse at 18% 10%,rgba(255,255,255,.1),transparent 45%);pointer-events:none;z-index:5}
+#menu .logo,#menu .hud,#menu .disc,#menu h1,#menu .sub,#menu .items{z-index:6}
+#menu{padding-left:calc(8vw + var(--bz));padding-right:calc(8vw + var(--bz))}
+#menu .hud{left:calc(var(--bz) + 5vmin);right:calc(var(--bz) + 5vmin)}
+#menu .hud.t{top:calc(var(--bz) + 4vmin + env(safe-area-inset-top,0px))}
+#menu .hud.b{bottom:calc(var(--bz) + 4vmin)}
+.tv.pow .scr{animation:pow .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pow{0%{transform:scale(1,.004);filter:brightness(6)}45%{transform:scale(1,.02);filter:brightness(4)}100%{transform:none;filter:none}}
+@media(max-width:860px){.tv{position:absolute;width:auto;max-width:none;margin:0}.scr .dim{background:linear-gradient(180deg,rgba(3,8,40,.55),rgba(3,8,40,.78))}.scr .ttl{max-width:70vw;bottom:calc(var(--bz) + 9vmin);font-size:28px}.scr .rec{display:none}.scr .osd{top:calc(var(--bz) + 17vmin)}.scr img#tvi,.scr video{object-position:50% 50%}}
+@media(prefers-reduced-motion:reduce){.scr .fx,.scr .fx:after,.scr.im img#tvi,.tv.pow .scr{animation:none}}
 .vids{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
 .vids figure{margin:0;border:2px solid var(--line);background:#000;max-width:100%}
 .vids video{display:block;max-width:100%;max-height:70vh;background:#000}
@@ -388,7 +418,8 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 <div id="home">
 <div id="menu">
 <div class="logo">DP</div>
-<a class="tv" id="tv" href="#/kinepolis" aria-label="Trailers bekijken"><div class="scr" id="scr"><video id="tvv" muted loop playsinline preload="auto"></video><span class="osd" id="ch">CH 01</span><span class="rec">▶ PLAY <b id="tc">00:00</b></span><div class="ttl" id="ttl">Backrooms<br><small>Teaser</small></div></div><div class="knobs"><i></i><i></i><span>KINEPOLIS · TRAILERS</span></div></a>
+<a class="tv" id="tv" href="#/kinepolis" aria-label="Trailers bekijken"><div class="scr" id="scr"><img id="tvi" alt=""><video id="tvv" muted loop playsinline preload="auto"></video><div class="dim"></div><div class="fx"></div><span class="osd" id="ch">CH 01</span><span class="rec">▶ PLAY <b id="tc">00:00</b></span><div class="ttl" id="ttl">Backrooms<br><small>Teaser</small></div></div></a>
+<div class="bezel"></div><div class="glass"></div>
 <div class="hud t"><span>● REC</span><span>PORTFOLIO · 2026</span></div>
 <div class="disc">DISC 01 · NL · 16:9</div>
 <h1>DYLAN<br>PROTASI</h1>
@@ -575,7 +606,7 @@ home.style.display='none';proj.style.display='';window.scrollTo(0,0)}
 var boot=document.getElementById('boot'),log=document.getElementById('log');
 var lines=['DYLAN_OS v1.0','Geheugen controleren... OK','Portfolio laden... 8 projecten gevonden','Disc inlezen...','> start menu'];
 var done=false,i=0;
-function end(){if(done)return;done=true;boot.classList.add('off');setTimeout(function(){boot.style.display='none'},600)}
+function end(){if(done)return;done=true;boot.classList.add('off');var t=document.getElementById('tv');if(t)t.classList.add('pow');setTimeout(function(){boot.style.display='none'},600)}
 function next(){if(done)return;if(i<lines.length){log.innerHTML+=lines[i++]+'<br>';setTimeout(next,380)}else setTimeout(end,500)}
 next();boot.addEventListener('click',end);
 document.addEventListener('keydown',function(e){if(!done){end();return}});
@@ -614,11 +645,26 @@ var P=[
  m:[['',['Rhode banner'],0,['r1']],['Meer beelden',['Lip Boost close-up','Winterlook','Product op fleece','Voetafdruk','Zonnebril'],0,['r2','r3','r4','r5','r6'],[[1,0],[2,3,4]],[[1,0],[2,3],[4]]]]}
 ];
 
-var CH=[['Backrooms','Teaser','radial-gradient(circle,#6b5a14,#1a1405)','backrooms'],['Deep Water','Teaser','radial-gradient(circle,#0f5a7a,#03141c)','dw'],['The Furious','Teaser','radial-gradient(circle,#7a1a1a,#1a0505)','furious'],['LifeHack','Teaser','radial-gradient(circle,#2a7a3a,#051a0a)','lh'],['Kangaroo','Trailer','radial-gradient(circle,#8a4a14,#1c0d03)','kang'],['The Strangers','Chapter 3 Teaser','radial-gradient(circle,#3a2a6a,#0a0518)','ts']];
-var ci=-1,tsec=0,scr=document.getElementById('scr'),tvv=document.getElementById('tvv');
-function tune(){scr.classList.add('st');setTimeout(function(){ci=(ci+1)%CH.length;var c=CH[ci];scr.style.setProperty('--c',c[2]);document.getElementById('ttl').innerHTML=c[0]+'<br><small>'+c[1]+'</small>';document.getElementById('ch').textContent='CH 0'+(ci+1)+' · '+c[0].toUpperCase();tsec=0;
-if(c[3]){tvv.src=V[c[3]];scr.classList.add('vid');var pr=tvv.play();if(pr&&pr.catch)pr.catch(function(){})}else{tvv.pause();scr.classList.remove('vid')}
-scr.classList.remove('st');setTimeout(tune,c[3]?9000:3600)},450)}
+var CH=[
+['Hampton Bays','Stage · Belgisch modemerk','radial-gradient(circle,#7a3a4a,#1a0a10)',0,'m3',0,'#/hampton'],
+['Backrooms','Teaser','radial-gradient(circle,#6b5a14,#1a1405)','backrooms',0,0,'#/kinepolis'],
+['PINKO','Dagstage · Eindopdracht Fashion Masterclass','radial-gradient(circle,#8a0f4f,#1a0210)',0,'pkm',0,'#/pinko'],
+['Deep Water','Teaser','radial-gradient(circle,#0f5a7a,#03141c)','dw',0,1,'#/kinepolis'],
+['Rhode — Christmas Edit','Fictieve campagne','radial-gradient(circle,#8f1b24,#1a0509)',0,'xm6',0,'#/rhode-xmas'],
+['The Furious','Teaser','radial-gradient(circle,#7a1a1a,#1a0505)','furious',0,0,'#/kinepolis'],
+['IOAN — Sun Set 50','Fictieve campagne','radial-gradient(circle,#c87a2a,#2a1203)',0,'ban',0,'#/ioan'],
+['LifeHack','Teaser','radial-gradient(circle,#2a7a3a,#051a0a)','lh',0,0,'#/kinepolis'],
+['Disney Winter Village','Bachelorproef · Concept & strategie','radial-gradient(circle,#2b2f9c,#0a1450)',0,'img/bn-disney.jpg',1,'#/disney'],
+['Kangaroo','Trailer','radial-gradient(circle,#8a4a14,#1c0d03)','kang',0,1,'#/kinepolis'],
+['Rhode — Peptide Lip Boost','Fictieve campagne','radial-gradient(circle,#5a8cc3,#0d2236)',0,'r1',0,'#/rhode'],
+['The Strangers','Chapter 3 Teaser','radial-gradient(circle,#3a2a6a,#0a0518)','ts',0,0,'#/kinepolis']
+];
+var ci=-1,tsec=0,scr=document.getElementById('scr'),tvv=document.getElementById('tvv'),tvi=document.getElementById('tvi'),tvl=document.getElementById('tv');
+function tune(){scr.classList.add('st');setTimeout(function(){ci=(ci+1)%CH.length;var c=CH[ci];scr.style.setProperty('--c',c[2]);document.getElementById('ttl').innerHTML=c[0]+'<br><small>'+c[1]+'</small>';document.getElementById('ch').textContent='CH '+(ci<9?'0':'')+(ci+1)+' · '+c[0].toUpperCase();tvl.setAttribute('href',c[6]);tsec=0;
+scr.classList.toggle('cov',!!c[5]);
+if(c[3]){tvi.removeAttribute('src');scr.classList.remove('im','land');tvv.src=V[c[3]];scr.classList.add('vid');var pr=tvv.play();if(pr&&pr.catch)pr.catch(function(){})}
+else{tvv.pause();scr.classList.remove('vid');var u=I[c[4]]||c[4];scr.style.setProperty('--bgi','url('+u+')');tvi.onload=function(){scr.classList.toggle('land',tvi.naturalWidth/tvi.naturalHeight>1.25)};scr.classList.remove('im');tvi.src=u;void scr.offsetWidth;scr.classList.add('im')}
+scr.classList.remove('st');setTimeout(tune,c[3]?9000:5200)},450)}
 tune();
 setInterval(function(){tsec++;document.getElementById('tc').textContent='00:'+(tsec<10?'0':'')+tsec},1000);
 var home=document.getElementById('home'),proj=document.getElementById('proj');
