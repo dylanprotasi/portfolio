@@ -463,41 +463,10 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 @media(prefers-reduced-motion:reduce){.bn-tt,.bn-tag,.bn-live i{animation:none}.bn-tw{overflow-x:auto}}
 @media(prefers-reduced-motion:reduce){.pc:hover::after{animation:none}.mqt{animation:none}.mq{overflow-x:auto}.waves,.sun{animation:none}.marq{animation:none}.scr.st:after{animation:none}}
 @media(prefers-reduced-motion:reduce){.logo,.press,#boot .cur{animation:none}html{scroll-behavior:auto}}
-body.cine{overflow:hidden}
-#cine{position:fixed;inset:0;z-index:45;background:#07050a;touch-action:none;font-family:Oswald,'IBM Plex Mono',sans-serif;color:#fff;display:none}
-#cine-cv{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:none}
-#cine-hud{position:absolute;inset:0;pointer-events:none}
-#cine-logo{position:absolute;left:16px;top:12px;font:700 20px/1 Oswald,sans-serif;letter-spacing:.12em;color:#ffd27a;text-shadow:0 0 12px #ff9a1f}
-#cine-logo small{display:block;font:500 11px Oswald,sans-serif;letter-spacing:.2em;color:#cbb8c0;margin-top:5px;text-shadow:none}
-#cine-chips{position:absolute;left:0;right:0;top:56px;display:flex;gap:6px;overflow-x:auto;padding:4px 14px;pointer-events:auto;scrollbar-width:none}
-#cine-chips::-webkit-scrollbar{display:none}
-#cine-chips button{flex:none;font:500 13px Oswald,sans-serif;letter-spacing:.06em;color:#fff;background:rgba(10,8,14,.72);border:1px solid var(--c);border-radius:20px;padding:5px 12px;cursor:pointer}
-#cine-chips button.on{background:var(--c);color:#000}
-#cine-intro{position:absolute;left:16px;right:16px;top:56%;text-align:center;transition:opacity .3s;text-shadow:0 2px 22px #000,0 0 6px #000}
-#cine-intro h1{font:700 clamp(30px,6vw,66px)/1.05 Oswald,sans-serif;letter-spacing:.06em;margin:0}
-#cine-intro p{font:500 clamp(14px,2vw,20px) Oswald,sans-serif;letter-spacing:.14em;color:#ffd27a;margin:.7em 0 0}
-#cine-cap{position:absolute;left:50%;bottom:68px;transform:translateX(-50%) translateY(12px);text-align:center;background:rgba(9,6,12,.78);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:12px 26px 14px;min-width:min(86vw,340px);opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;backdrop-filter:blur(6px)}
-#cine-cap.on{opacity:1;transform:translateX(-50%);pointer-events:auto}
-#cine-cap small{display:block;font:700 13px Oswald,sans-serif;letter-spacing:.26em}
-#cine-cap b{display:block;font:700 clamp(22px,4vw,32px)/1.1 Oswald,sans-serif;margin:3px 0 2px}
-#cine-cap span{display:block;font:500 14px Oswald,sans-serif;color:#d6cfd8;letter-spacing:.05em}
-#cine-cap button{margin-top:10px;font:700 16px Oswald,sans-serif;letter-spacing:.1em;border:0;border-radius:24px;padding:9px 26px;color:#000;cursor:pointer}
-#cine-classic,#tocine{font:500 14px Oswald,sans-serif;letter-spacing:.08em;color:#fff;background:rgba(9,6,12,.78);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:8px 14px;cursor:pointer}
-#cine-classic{position:absolute;left:14px;bottom:14px;pointer-events:auto}
-#tocine{position:fixed;left:14px;bottom:14px;z-index:30;display:none}
-#cine-hint{position:absolute;right:16px;bottom:20px;font:500 13px Oswald,sans-serif;letter-spacing:.1em;color:#d6cfd8;transition:opacity .6s;text-align:right;max-width:40vw}
-#cine-hint.off{opacity:0}
-#cine-tip{position:fixed;z-index:50;pointer-events:none;background:rgba(9,6,12,.9);border:1px solid #ffd27a;border-radius:8px;padding:5px 10px;font:500 13px Oswald,sans-serif;letter-spacing:.06em;opacity:0;transition:opacity .15s;white-space:nowrap}
-#cine-tip.on{opacity:1}
-#cine-fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .5s}
-#cine-fade.on{opacity:1}
-@media(max-width:640px){#cine-cap{bottom:62px;padding:10px 18px 12px}#cine-hint{max-width:46vw;font-size:12px}}
 </style>
 </head>
 <body>
 
-<div id="cine"><div id="cine-hud"><div id="cine-logo">DYLAN PROTASI<small>Cinema · Content &amp; marketing</small></div><div id="cine-chips"></div><div id="cine-intro"><p>Welkom in mijn cinema · elke zaal is een project</p></div><div id="cine-cap"></div><button type="button" id="cine-classic">☰ Klassiek menu</button><div id="cine-hint">Scroll of sleep om door de hal te lopen</div></div><div id="cine-tip"></div><div id="cine-fade"></div></div>
-<button type="button" id="tocine">🎬 Naar de cinema</button>
 <div id="boot" role="button" tabindex="0" aria-label="Portfolio starten">
 <div class="hl h1"></div><div class="hl h2"></div>
 <div class="cl" style="left:6%;top:14%;width:16%;height:9%"></div><div class="cl" style="left:70%;top:6%;width:14%;height:7%"></div><div class="cl" style="left:40%;top:3%;width:12%;height:6%"></div><div class="cl" style="left:85%;top:36%;width:12%;height:6%"></div>
@@ -704,7 +673,7 @@ home.style.display='none';proj.style.display='';window.scrollTo(0,0)}
 <script>
 var boot=document.getElementById('boot'),done=false;
 function end(){if(done)return;done=true;boot.classList.add('off');setTimeout(function(){boot.style.display='none'},600)}
-(function(){return;
+(function(){
 var pal='#000,#808080,#800000,#808000,#008000,#008080,#000080,#800080,#808040,#004040,#0080ff,#004080,#8000ff,#804000,#fff,#c0c0c0,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#ffff80,#00ff80,#80ffff,#8080ff,#ff0080,#ff8040'.split(','),pe=document.getElementById('xpal');
 pe.innerHTML=pal.map(function(c){return '<i style="background:'+c+'"></i>'}).join('');
 var ck=document.getElementById('xclk');function clk(){var d=new Date();ck.textContent=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)}clk();
@@ -726,7 +695,7 @@ var links=[].slice.call(document.querySelectorAll('#items a')),cur=0;
 function sel(n){links[cur].classList.remove('on');cur=(n+links.length)%links.length;links[cur].classList.add('on')}
 links.forEach(function(a,n){a.addEventListener('mouseenter',function(){sel(n)})});
 document.addEventListener('keydown',function(e){
-if(!done||window.scrollY>200||document.body.classList.contains('cine'))return;
+if(!done||window.scrollY>200)return;
 if(e.key==='ArrowDown'){e.preventDefault();sel(cur+1)}
 else if(e.key==='ArrowUp'){e.preventDefault();sel(cur-1)}
 else if(e.key==='Enter'){links[cur].click()}
@@ -803,7 +772,7 @@ if(p.f)o+='<div class="note">Deze beelden zijn uitsluitend ontwikkeld voor creat
 o+='<div class="pn"><a href="#/'+q.id+'">◀ '+q.t+'</a><a href="#/'+n.id+'">'+n.t+' ▶</a></div></div>';
 proj.innerHTML=o;[].forEach.call(proj.querySelectorAll('img[data-i]'),function(m){m.src=I[m.getAttribute('data-i')]});[].forEach.call(proj.querySelectorAll('video[data-v]'),function(v){v.src=V[v.getAttribute('data-v')]});home.style.display='none';proj.style.display='';window.scrollTo(0,0)}
 window.addEventListener('hashchange',show);
-boot.style.display='none';done=true;
+if(location.hash.indexOf('#/')===0){boot.style.display='none';done=true}
 show();
 </script>
 <div id="lb"><img alt=""></div>
@@ -825,8 +794,6 @@ var ab=document.getElementById('abph');
 if(ab){var AB=[['ab1',.747],['ab2',.75]],AR2=[[0,1]];ab.innerHTML=AR2.map(function(r){return '<div class="jr">'+r.map(function(j){return '<figure class="ph" style="flex:'+AB[j][1]+' 1 0%;cursor:default"><img alt="Dylan" src="'+I[AB[j][0]]+'"></figure>'}).join('')+'</div>'}).join('')}
 
 </script>
-<script src="js/three.min.js"></script>
-<script src="js/cinema.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>
