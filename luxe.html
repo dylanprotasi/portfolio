@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dylan Protasi — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a09;--bg2:#12100e;--iv:#efe8dc;--mu:#9c9486;--au:#c2a06a;--au2:#e6cf9f;--ln:rgba(194,160,106,.35)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--iv);font-family:Jost,"Helvetica Neue",Arial,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+a{color:inherit;text-decoration:none}
+.serif,h1,h2,h3{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:300}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:26px 6vw;padding-right:calc(6vw + 90px);mix-blend-mode:difference}
+nav .lo{font:italic 400 24px "Cormorant Garamond",Georgia,serif;letter-spacing:.02em}
+nav div{display:flex;gap:clamp(16px,3vw,44px);font-size:11px;letter-spacing:.28em;text-transform:uppercase}
+nav a{position:relative}nav a:after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:currentColor;transition:width .4s}nav a:hover:after{width:100%}
+.lang{position:fixed;right:6vw;top:28px;z-index:60;font-size:11px;letter-spacing:.24em;color:var(--au2);cursor:pointer}
+.lang u{text-underline-offset:5px}
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;padding:0 6vw}
+.hero .bg{position:absolute;inset:0;background:radial-gradient(60% 55% at 78% 40%,rgba(194,160,106,.16),transparent 70%),radial-gradient(40% 40% at 10% 90%,rgba(120,60,50,.2),transparent 70%)}
+.hero small{position:relative;font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--au)}
+.hero h1{position:relative;font-size:clamp(64px,15vw,250px);line-height:.88;font-style:italic;letter-spacing:-.02em;margin:22px 0 0 -.04em}
+.hero h1 span{display:block;padding-left:12vw;font-style:normal;color:transparent;-webkit-text-stroke:1px var(--au)}
+.hero p{position:relative;max-width:440px;margin:44px 0 0 12vw;color:var(--mu);line-height:1.8;font-size:15px}
+.hero .sc{position:absolute;right:6vw;bottom:44px;writing-mode:vertical-rl;font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--mu);display:flex;align-items:center;gap:16px}
+.hero .sc:after{content:"";width:1px;height:70px;background:linear-gradient(var(--au),transparent)}
+.hero .pt{position:absolute;right:11vw;top:20vh;width:min(26vw,360px);aspect-ratio:3/4;border:1px solid var(--ln);padding:12px}
+.hero .pt img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.sh{display:flex;align-items:baseline;gap:28px;padding:140px 6vw 70px}
+.sh h2{font-size:clamp(46px,8vw,120px);font-style:italic;line-height:1}
+.sh small{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--au)}
+.sh i{flex:1;height:1px;background:var(--ln);align-self:center}
+.row{display:grid;grid-template-columns:1.25fr 1fr;gap:8vw;align-items:center;padding:30px 6vw 90px}
+.row.rev{grid-template-columns:1fr 1.25fr}.row.rev .ph{order:2}
+.ph{position:relative;aspect-ratio:4/3}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .8s;filter:saturate(.9)}
+.ph{overflow:hidden}
+.fr{position:absolute;inset:14px;border:1px solid rgba(239,232,220,.5);z-index:2;pointer-events:none;transition:inset .8s}
+.row:hover .ph img{transform:scale(1.05);filter:saturate(1.05)}
+.row:hover .fr{inset:24px}
+.tx{position:relative}
+.no{position:absolute;top:-.62em;left:-.04em;font:italic 300 clamp(110px,15vw,220px)/1 "Cormorant Garamond",Georgia,serif;color:transparent;-webkit-text-stroke:1px var(--ln);z-index:0}
+.tx small,.tx h3,.tx p,.tx .go{position:relative;z-index:1}
+.tx small{display:block;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--au);margin-top:70px}
+.tx h3{font-size:clamp(36px,4.6vw,68px);line-height:1.02;margin-top:16px}
+.tx p{color:var(--mu);line-height:1.85;font-size:15px;margin-top:22px;max-width:420px}
+.go{display:inline-flex;align-items:center;gap:16px;margin-top:34px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--au2)}
+.go:after{content:"";width:46px;height:1px;background:var(--au);transition:width .5s}
+.row:hover .go:after{width:90px}
+.fic{background:var(--bg2);padding-bottom:140px}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;padding:0 6vw;align-items:start}
+.fc{position:relative;overflow:hidden;display:block}
+.fc img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1);filter:saturate(.9)}
+.fc.c0{grid-column:1/6;aspect-ratio:3/4}
+.fc.c1{grid-column:7/13;aspect-ratio:4/5;margin-top:120px}
+.fc.c2{grid-column:3/10;aspect-ratio:16/10;margin-top:-30px}
+.fc:hover img{transform:scale(1.06)}
+.ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;background:linear-gradient(transparent 45%,rgba(11,10,9,.88));transition:background .6s}
+.ov small{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--au2)}
+.ov h3{font-size:clamp(26px,3vw,42px);font-style:italic;margin-top:8px;line-height:1.05}
+.ov p{font-size:14px;line-height:1.7;color:#cfc7b8;max-height:0;opacity:0;overflow:hidden;transition:all .6s;margin-top:0}
+.fc:hover .ov p{max-height:120px;opacity:1;margin-top:10px}
+.ab{display:grid;grid-template-columns:1fr 1.15fr;gap:8vw;align-items:center;padding:160px 6vw}
+.ab .pp{position:relative;margin-right:30px}
+.ab .pp:before{content:"";position:absolute;inset:30px -30px -30px 30px;border:1px solid var(--au)}
+.ab .pp img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.ab h2{font-size:clamp(44px,6.4vw,100px);line-height:.98;font-style:italic}
+.ab h2 em{color:var(--au2)}
+.ab p{color:var(--mu);line-height:1.9;margin-top:34px;max-width:520px;font-size:15px}
+.sk{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:34px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--au)}
+.sk span:before{content:"✦ ";font-size:8px}
+.ct{text-align:center;padding:140px 6vw 120px;border-top:1px solid var(--ln);position:relative}
+.ct small{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--au)}
+.ct h2{font-size:clamp(46px,9vw,140px);font-style:italic;line-height:1;margin:24px 0 38px}
+.ct .em{display:inline-block;font:300 clamp(22px,3.4vw,46px) "Cormorant Garamond",Georgia,serif;border-bottom:1px solid var(--au);padding-bottom:8px;color:var(--au2)}
+.ct .lk{display:block;margin-top:56px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mu)}
+.ct .lk a{margin:0 18px}.ct .lk a:hover{color:var(--au2)}
+footer{padding:26px 6vw 40px;font-size:11px;letter-spacing:.14em;color:#6f685c;text-align:center}
+.rv{opacity:0;transform:translateY(46px);transition:opacity 1.2s,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+nav div a:not(:last-child){display:none}
+.hero .pt{display:none}.hero h1 span{padding-left:6vw}.hero p{margin-left:0}.hero .sc{display:none}
+.row,.row.rev{grid-template-columns:1fr;gap:34px;padding:10px 6vw 70px}.row.rev .ph{order:0}
+.no{font-size:110px}.tx small{margin-top:54px}
+.gal{display:block;padding:0 6vw}.fc{margin:0 0 28px!important}.fc.c2{aspect-ratio:4/3}
+.ov p{max-height:none;opacity:1;margin-top:8px}
+.ab{grid-template-columns:1fr;padding:100px 6vw;gap:70px}
+.sh{padding:90px 6vw 40px}}
+</style></head><body>
+<nav><a class="lo" href="#top">Dylan Protasi</a><div><a href="#werk" data-en="Work">Werk</a><a href="#fictief" data-en="Fiction">Fictief</a><a href="#over" data-en="About">Over mij</a><a href="#contact" data-en="Contact">Contact</a></div></nav>
+<div class="lang" id="lg"><u>NL</u> / EN</div>
+
+<header class="hero" id="top"><div class="bg"></div>
+<div class="pt"><img src="img/ab1.jpg" alt=""></div>
+<small data-en="Portfolio · 2026 · Content &amp; Marketing">Portfolio · 2026 · Content &amp; Marketing</small>
+<h1>Dylan<span>Protasi</span></h1>
+<p data-en="Marketing, video and campaigns for fashion and film. Crafted with an eye for the details that make a brand feel desirable.">Marketing, video en campagnes voor fashion en film. Gemaakt met oog voor de details die een merk begeerlijk maken.</p>
+<div class="sc" data-en="Scroll">Scroll</div></header>
+
+<section id="werk"><div class="sh rv"><h2 data-en="Selected work">Geselecteerd werk</h2><i></i><small>I</small></div>
+<a class="row rv " href="index.html#/kinepolis"><div class="ph"><div class="fr"></div><img src="img/bn-kinepolis.jpg" alt="" loading="lazy"></div><div class="tx"><span class="no">01</span><small>Kinepolis · 2026</small><h3>Kinepolis Film Distribution</h3><p data-en="Internship as marketing assistant: trailers and teasers edited, quizzes designed, content calendars managed and the Backrooms campaign set up.">Stage als marketingassistent: trailers en teasers gemonteerd, quizzes ontworpen, contentkalenders beheerd en de campagne voor Backrooms opgezet.</p><span class="go" data-en="View project">Bekijk project</span></div></a>
+<a class="row rv rev" href="index.html#/hampton"><div class="ph"><div class="fr"></div><img src="img/bn-hampton.jpg" alt="" loading="lazy"></div><div class="tx"><span class="no">02</span><small>Hampton Bays · 2026</small><h3>Hampton Bays</h3><p data-en="Full marketing for a fashion brand without a marketing department: socials, Meta Ads, shoots and AI imagery.">Volledige marketing van een modemerk zonder marketingafdeling: socials, Meta Ads, shoots en AI-beeld.</p><span class="go" data-en="View project">Bekijk project</span></div></a>
+<a class="row rv " href="index.html#/pinko"><div class="ph"><div class="fr"></div><img src="img/bn-pinko.jpg" alt="" loading="lazy"></div><div class="tx"><span class="no">03</span><small>Pinko · 2025</small><h3>PINKO</h3><p data-en="Day internship at a trunk show in Brussels, plus an event concept: The Fearless Confessional.">Dagstage op een trunkshow in Brussel en een eventconcept als eindopdracht: The Fearless Confessional.</p><span class="go" data-en="View project">Bekijk project</span></div></a>
+<a class="row rv rev" href="index.html#/disney"><div class="ph"><div class="fr"></div><img src="img/bn-disney.jpg" alt="" loading="lazy"></div><div class="tx"><span class="no">04</span><small>Bachelorproef · 2026</small><h3>Disney Winter Village</h3><p data-en="Transmedia retail concept for Maasmechelen Village, with business model and customer journey.">Transmediaal retailconcept voor Maasmechelen Village, met businessmodel en klantreis.</p><span class="go" data-en="View project">Bekijk project</span></div></a>
+<a class="row rv " href="index.html#/fifth"><div class="ph"><div class="fr"></div><img src="img/bn-fifth.jpg" alt="" loading="lazy"></div><div class="tx"><span class="no">05</span><small>Magazine · 2025</small><h3>The Fifth</h3><p data-en="My own magazine as year-2 final work, from concept to layout.">Eigen magazine als eindwerk van jaar 2, van concept tot lay-out.</p><span class="go" data-en="View project">Bekijk project</span></div></a>
+</section>
+
+<section id="fictief" class="fic"><div class="sh rv"><h2 data-en="Fictional work">Fictief werk</h2><i></i><small>II</small></div>
+<div class="gal">
+<a class="fc rv c0" href="index.html#/rhode-xmas"><img src="img/bn-rhode-xmas.jpg" alt="" loading="lazy"><div class="ov"><small data-en="Fictional">Fictief</small><h3>Rhode — Christmas Edit</h3><p data-en="Candy cane tubes, gingerbread and a Christmas tree box with a red bow.">Candy cane-tubes, gingerbread en een kerstboomdoos met rode strik.</p></div></a>
+<a class="fc rv c1" href="index.html#/rhode"><img src="img/bn-rhode.jpg" alt="" loading="lazy"><div class="ov"><small data-en="Fictional">Fictief</small><h3>Rhode — Lip Boost</h3><p data-en="A raw winter look for men instead of sterile studio aesthetics. Made entirely with AI.">Ruwe winterlook voor mannen i.p.v. steriele studio-esthetiek. Volledig met AI gemaakt.</p></div></a>
+<a class="fc rv c2" href="index.html#/ioan"><img src="img/bn-ioan.jpg" alt="" loading="lazy"><div class="ov"><small data-en="Fictional">Fictief</small><h3>IOAN — Sun Set 50</h3><p data-en="Cinematic grooming production at golden hour. Editorial meets skincare.">Cinematografische grooming-productie tijdens golden hour. Editorial meets skincare.</p></div></a>
+</div></section>
+
+<section id="over" class="ab"><div class="pp rv"><img src="img/ab1.jpg" alt="Dylan Protasi"></div>
+<div class="rv"><small style="font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--au)" data-en="About me">Over mij</small>
+<h2 style="margin-top:20px" data-en="Creative, curious, <em>detail-obsessed.</em>">Creatief, leergierig, <em>detailgericht.</em></h2>
+<p data-en="I'm Dylan, a creative and eager-to-learn guy with a passion for media, fashion and the film industry. I focus on graphic design, concept development and video editing.">Ik ben Dylan, een creatieve en leergierige jongen met een passie voor media, fashion en de filmindustrie. Ik hou me vooral bezig met grafisch ontwerp, conceptontwikkeling en video-editing.</p>
+<div class="sk"><span data-en="Content creation">Contentcreatie</span><span data-en="Video editing">Video-editing</span><span data-en="Graphic design">Grafisch ontwerp</span><span>Meta Ads</span><span>Photoshop</span></div></div></section>
+
+<section id="contact" class="ct rv"><small data-en="Contact">Contact</small><h2 data-en="Let's create<br>something.">Laten we iets<br>moois maken.</h2>
+<a class="em" href="mailto:dylan.protasi@gmail.com">dylan.protasi@gmail.com</a>
+<span class="lk"><a href="index.html#/nieuws">PR-OTASI</a><a href="index.html" data-en="Classic DVD menu">Klassiek DVD-menu</a></span></section>
+<footer>© 2026 Dylan Protasi · <span data-en="Fictional campaigns are concept work without commercial intent.">Fictieve campagnes zijn conceptwerk zonder commerciële intentie.</span></footer>
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+var els=[].slice.call(document.querySelectorAll('[data-en]'));els.forEach(function(e){e.dataset.nl=e.innerHTML});
+function lang(l){els.forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.nl});document.documentElement.lang=l;document.getElementById('lg').innerHTML=l==='en'?'NL / <u>EN</u>':'<u>NL</u> / EN';try{localStorage.setItem('lang',l)}catch(x){}}
+document.getElementById('lg').onclick=function(){lang(document.documentElement.lang==='en'?'nl':'en')};
+try{if(localStorage.getItem('lang')==='en')lang('en')}catch(x){}
+</script></body></html>
