@@ -380,7 +380,6 @@ img.nw-ct{object-fit:contain!important;background:#e0e0e1}
 @media(prefers-reduced-motion:reduce){.pc:hover::after{animation:none}.mqt{animation:none}.mq{overflow-x:auto}.waves,.sun{animation:none}.marq{animation:none}.scr.st:after{animation:none}}
 @media(prefers-reduced-motion:reduce){.logo,.press,#boot .cur{animation:none}html{scroll-behavior:auto}}
 </style>
-<link rel="stylesheet" href="mac.css">
 </head>
 <body>
 
@@ -584,7 +583,7 @@ var links=[].slice.call(document.querySelectorAll('#items a')),cur=0;
 function sel(n){links[cur].classList.remove('on');cur=(n+links.length)%links.length;links[cur].classList.add('on')}
 links.forEach(function(a,n){a.addEventListener('mouseenter',function(){sel(n)})});
 document.addEventListener('keydown',function(e){
-if(!done||window.scrollY>200||document.body.classList.contains('mac'))return;
+if(!done||window.scrollY>200)return;
 if(e.key==='ArrowDown'){e.preventDefault();sel(cur+1)}
 else if(e.key==='ArrowUp'){e.preventDefault();sel(cur-1)}
 else if(e.key==='Enter'){links[cur].click()}
@@ -661,7 +660,7 @@ if(p.f)o+='<div class="note">Deze beelden zijn uitsluitend ontwikkeld voor creat
 o+='<div class="pn"><a href="#/'+q.id+'">◀ '+q.t+'</a><a href="#/'+n.id+'">'+n.t+' ▶</a></div></div>';
 proj.innerHTML=o;[].forEach.call(proj.querySelectorAll('img[data-i]'),function(m){m.src=I[m.getAttribute('data-i')]});[].forEach.call(proj.querySelectorAll('video[data-v]'),function(v){v.src=V[v.getAttribute('data-v')]});home.style.display='none';proj.style.display='';window.scrollTo(0,0)}
 window.addEventListener('hashchange',show);
-boot.style.display='none';done=true;
+if(location.hash.indexOf('#/')===0){boot.style.display='none';done=true}
 show();
 </script>
 <div id="lb"><img alt=""></div>
@@ -683,7 +682,6 @@ var ab=document.getElementById('abph');
 if(ab){var AB=[['ab1',.747],['ab2',.75]],AR2=[[0,1]];ab.innerHTML=AR2.map(function(r){return '<div class="jr">'+r.map(function(j){return '<figure class="ph" style="flex:'+AB[j][1]+' 1 0%;cursor:default"><img alt="Dylan" src="'+I[AB[j][0]]+'"></figure>'}).join('')+'</div>'}).join('')}
 
 </script>
-<script src="mac.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>
