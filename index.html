@@ -186,10 +186,25 @@ body.lipton{--bg:#e6f2fd;--fg:#12307b;--mut:#4b6aa8;--line:#ffcb00;--acc:#ffcb00
 .lipton .note{border-color:#ffcb00}
 .lipton .ch,.lipton .back{color:#12307b}.lipton .back:hover,.lipton .pn a:hover{color:#d3202f}
 .lipton .mh{color:#fff;text-shadow:2px 2px 0 #12307b,3px 3px 0 #ffcb00}
+
+.ph-wrap{display:flex;justify-content:center;margin:10px 0 34px}
+.iph{width:300px;background:#111;border-radius:46px;padding:11px;box-shadow:0 18px 40px rgba(18,48,123,.45),inset 0 0 0 2px #444;position:relative}
+.iph .ip-scr{background:#fff;border-radius:36px;overflow:hidden;color:#111;font:13px/1.35 -apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+.iph .ip-isl{position:absolute;top:19px;left:50%;transform:translateX(-50%);width:84px;height:24px;background:#000;border-radius:14px;z-index:3}
+.iph .ip-st{display:flex;justify-content:space-between;padding:14px 24px 6px;font-weight:600;font-size:12px}
+.iph .ip-ih{display:flex;align-items:center;gap:8px;padding:8px 12px}
+.iph .ip-av{width:30px;height:30px;border-radius:50%;background:#ffcb00;border:2px solid #d3202f;display:grid;place-items:center;font-weight:800;font-size:9px;color:#d3202f}
+.iph .ip-un{font-weight:600;font-size:13px}.iph .ip-sp{font-size:10px;color:#777}
+.iph .ip-dots3{margin-left:auto;font-weight:900;letter-spacing:1px}
+.iph .ip-cr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.iph .ip-cr::-webkit-scrollbar{display:none}
+.iph .ip-cr img{width:278px;height:347.5px;flex:none;scroll-snap-align:start;display:block}
+.iph .ip-ac{display:flex;align-items:center;padding:8px 12px;font-size:19px;gap:12px}
+.iph .ip-dt{display:flex;gap:4px;margin:0 auto;position:relative;left:-24px}.iph .ip-dt i{width:6px;height:6px;border-radius:50%;background:#c8c8c8}.iph .ip-dt i.on{background:#0095f6}
+.iph .ip-cp{padding:0 12px 14px;font-size:12.5px}
+.iph .ip-hm{height:5px;width:100px;background:#111;border-radius:3px;margin:0 auto 8px}
+@media(max-width:380px){.iph{transform:scale(.9)}}
 .t-lipton:hover{background:linear-gradient(#cfe7fb,#fff8d6);border-color:#12307b;box-shadow:5px 5px 0 #ffcb00}
 .t-lipton:hover .bar{background:linear-gradient(90deg,#12307b,#3d9be9);color:#fff}.t-lipton:hover h3{color:#12307b}.t-lipton:hover p{color:#4b6aa8}.t-lipton:hover .chips i{border-color:#ffcb00;color:#12307b}.t-lipton:hover .go{color:#d3202f}
-.t-lipton::after{background-image:radial-gradient(circle,rgba(255,255,255,.95) 0 2px,rgba(61,155,233,.35) 3px,transparent 4px),radial-gradient(circle,rgba(255,255,255,.9) 0 1.5px,rgba(255,203,0,.4) 2.5px,transparent 3.5px);background-size:46px 46px,70px 70px;background-position:0 0,20px 10px}
-.t-lipton:hover::after{animation:fall 3s linear infinite}
 .sun{position:fixed;top:-140px;right:-100px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,#fff6c9 0,#ffd27a 35%,rgba(255,180,90,0) 70%);animation:pulse 6s ease-in-out infinite;pointer-events:none;z-index:-1}
 @keyframes pulse{50%{transform:scale(1.08);opacity:.85}}
 .waves{position:fixed;left:0;right:0;bottom:0;height:46px;pointer-events:none;z-index:49;opacity:.22;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 20 Q25 0 50 20 T100 20 T150 20 T200 20 V40 H0Z' fill='%232a45b8'/%3E%3C/svg%3E") repeat-x 0 100%/200px 46px;animation:wv 9s linear infinite}
@@ -729,6 +744,7 @@ o+='<div class="mh">Extra activaties</div><div class="pk-3">'+win('DIGITAL_DUEL'
 o+='<div class="mh">Doelen</div><p class="pk-p">Streefcijfers uit het dossier, geen behaalde resultaten.</p><div class="pk-k"><div><strong>50</strong><span>leads via de Confessional Booth</span></div><div><strong>15</strong><span>nieuwe klanten jonger dan 30</span></div><div><strong>15.000</strong><span>views op #PinkoClashAntwerp</span></div><div><strong>€ 3.500</strong><span>omzet op de dag zelf</span></div></div><p class="pk-p">De catering kost € 126, ruim binnen de limiet van € 200.</p>';
 o+='<div class="mh">Schaalbaar</div><p class="pk-p">De mechaniek blijft overal gelijk: kies een kant, maak content, verzamel data. Alleen de stijlen en de gezichten veranderen. In Londen kan dat “Punk vs. Prep” zijn, in Milaan “Classic vs. Street”.</p>'}
 if(p.id==='ioan'){var IS={ban:{ar:1.8},lig:{ar:1.791},pro:{ar:1.339},spr:{ar:.7463},adv:{ar:.8}};o+='<div style="margin-top:28px">'+JG([['ban']],IS)+'</div><div class="mh">Meer beelden</div>'+JG(innerWidth<640?[['lig'],['spr','adv'],['pro']]:[['lig','spr'],['pro','adv']],IS)}
+if(p.id==='lipton')o+='<div class="mh">Zo ziet het eruit op Instagram</div><div class="ph-wrap"><div class="iph"><div class="ip-isl"></div><div class="ip-scr"><div class="ip-st"><span>9:41</span><span>●●● 5G ▮</span></div><div class="ip-ih"><div class="ip-av">Lipton</div><div><div class="ip-un">lipton_icetea</div><div class="ip-sp">Gesponsord</div></div><div class="ip-dots3">•••</div></div><div class="ip-cr" onscroll="var n=Math.round(this.scrollLeft/this.clientWidth);var d=this.parentNode.querySelectorAll(\'.ip-dt i\');for(var q=0;q<d.length;q++)d[q].className=q==n?\'on\':\'\'">'+['lp1','lp2','lp3','lp4','lp5'].map(function(k){return '<img src="'+I[k]+'" alt="" draggable="false">'}).join('')+'</div><div class="ip-ac"><span>♡</span><span>💬</span><span>➤</span><div class="ip-dt"><i class="on"></i><i></i><i></i><i></i><i></i></div><span style="margin-left:auto">🔖</span></div><div class="ip-cp"><b>lipton_icetea</b> Lekker bruisend! 🍋 Tag jouw zomermaatje &amp; win!</div><div class="ip-hm"></div></div></div></div><p class="lbl" style="text-align:center">Swipe door de carrousel.</p>';
 (p.m||[]).forEach(function(g){if(g[4]){o+='<div class="mh">'+g[0]+'</div><div class="jg">'+(innerWidth<640?g[5]:g[4]).map(function(r){return '<div class="jr">'+r.map(function(j){var k=g[3][j];return '<figure class="ph" style="flex:'+AR[k]+' 1 0%"><img data-i="'+k+'" alt="'+g[1][j]+'" title="'+g[1][j]+'"></figure>'}).join('')+'</div>'}).join('')+'</div>';return}if(g[3]){o+=(g[0]?'<div class="mh">'+g[0]+'</div>':'')+'<div class="frames gal'+(g[3].length<2?' one':'')+'">'+g[3].map(function(k,j){return '<figure class="ph"><img data-i="'+k+'" alt="'+g[1][j]+'"><figcaption>'+g[1][j]+'</figcaption></figure>'}).join('')+'</div>';return}o+='<div class="mh">'+g[0]+'</div><div class="frames">'+g[1].map(function(l,j){return '<a class="fr" href="'+p.src+'" target="_blank" rel="noopener"><small>'+(g[2]?'▶ VIDEO':'BEELD')+' '+('0'+(j+1))+'</small>'+l+'</a>'}).join('')+'</div>'});
 if(p.m&&p.m.some(function(g){return !g[3]}))o+='<p class="lbl" style="margin-top:14px">Klik op een kader om het beeld of de video te bekijken op mijn MyPortfolio.</p>';
 if(p.nt)o+='<div class="note">'+p.nt+'</div>';else if(p.f)o+='<div class="note">Deze beelden zijn uitsluitend ontwikkeld voor creatieve doeleinden. Dit is een fictief concept en geen officiële beelden. Alle rechten op namen, beelden en merken behoren toe aan '+p.f+'. Er is geen commerciële intentie.</div>';
