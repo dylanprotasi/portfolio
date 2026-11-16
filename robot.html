@@ -66,56 +66,11 @@ body.lt #lg{color:#0b0b0b}
 .pp h2{font-family:"Archivo Narrow","Arial Narrow",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:-.035em;line-height:.88;font-size:clamp(28px,4.2vw,66px);max-width:min(58vw,860px);margin-bottom:6vh}
 .pp p{max-width:430px;font-size:13px;line-height:1.2;margin-bottom:16px;color:#111}
 .saw{position:absolute;left:0;right:0;bottom:-1px;height:150vh;background:#000;clip-path:polygon(0 100%,0 52%,16% 14%,16% 58%,34% 22%,34% 66%,54% 30%,54% 74%,74% 36%,74% 80%,100% 40%,100% 100%);transform:translateY(100%);will-change:transform}
-
-/* cinema + y2k */
-.hero{background:#07050a}
-.hero .bgs{filter:blur(46px) saturate(1.5);transform:scale(1.25);opacity:.55}
-.wall{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 38%,transparent 30%,#07050a 80%),linear-gradient(#0d0a14,#07050a);opacity:.9}
-.beam{position:absolute;left:50%;top:-6vh;width:60vw;height:62vh;transform:translateX(-50%);background:linear-gradient(#fff3,#fff0 85%);clip-path:polygon(47% 0,53% 0,100% 100%,0 100%);mix-blend-mode:screen;opacity:.35;filter:blur(6px);animation:flick 3s infinite steps(1)}
-@keyframes flick{0%{opacity:.34}20%{opacity:.4}45%{opacity:.3}70%{opacity:.38}}
-.scr{position:absolute;left:50%;top:46%;transform:translate(-50%,-52%);width:min(56vw,980px);z-index:2}
-.scr .frame{position:relative;padding:7px;border-radius:12px;background:linear-gradient(145deg,#f4f7ff,#8b93aa 30%,#e8ecfa 52%,#6f7690 75%,#dfe4f5);box-shadow:0 0 90px 12px #8fb4ff44,0 0 220px 40px #ff3a6d22,0 30px 60px #000a}
-.scr .win{position:relative;left:auto;top:auto;transform:none;width:100%;border-radius:5px;box-shadow:inset 0 0 40px #000a}
-.scr .gl{position:absolute;inset:7px;border-radius:5px;pointer-events:none;background:linear-gradient(115deg,#fff3 0,#fff0 30%),repeating-linear-gradient(0deg,#0000 0 2px,#0003 2px 3px)}
-.ctl{display:flex;align-items:center;gap:10px;margin:10px auto 0;width:78%;padding:5px 10px;border-radius:99px;background:linear-gradient(#eef2ff,#9aa3c0 50%,#c7cde4);box-shadow:inset 0 1px 0 #fff,0 4px 14px #0008;color:#10142a;font-size:10px}
-.ctl .pb{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-size:8px;background:radial-gradient(circle at 35% 30%,#fff,#6ea8ff 60%,#2a58c8);color:#0a1a4a;box-shadow:0 1px 3px #0006}
-.ctl .trk{flex:1;height:7px;border-radius:9px;background:#10142a55;box-shadow:inset 0 1px 2px #0007;overflow:hidden}
-.ctl u{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(#fff,#4d8dff);transition:none}
-.spot{position:absolute;left:50%;bottom:-8vh;width:90vw;height:30vh;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 100%,#8fb4ff33,transparent);z-index:1}
-.cur{position:absolute;top:0;bottom:0;width:22vw;z-index:3;background:repeating-linear-gradient(90deg,#3a0008 0,#a50f1f 2.2vw,#e0283a 3vw,#8c0b18 4.4vw,#3a0008 5.4vw);box-shadow:0 0 60px #000c;transition:transform 2.4s cubic-bezier(.7,0,.2,1)}
-.cur::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0009,#0000 40%,#0000 60%,#0009)}
-.cur.l{left:0;transform-origin:left;clip-path:polygon(0 0,100% 0,78% 100%,0 100%);border-radius:0}.cur.r{right:0;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%)}
-.cur.l{transform:translateX(-5vw)}.cur.r{transform:translateX(5vw)}
-.hero:not(.ld) .cur.l{transform:translateX(0)}.hero:not(.ld) .cur.r{transform:translateX(0)}
-.val{position:absolute;left:0;right:0;top:0;height:7vh;z-index:4;background:repeating-linear-gradient(90deg,#8c0b18 0,#e0283a 3vw,#8c0b18 6vw);clip-path:polygon(0 0,100% 0,100% 55%,95% 100%,85% 60%,75% 100%,65% 60%,55% 100%,45% 60%,35% 100%,25% 60%,15% 100%,5% 60%,0 100%);box-shadow:0 10px 30px #000}
-.seats{position:absolute;left:-2vw;right:-2vw;bottom:0;height:26vh;z-index:2;pointer-events:none}
-.seats .row{position:absolute;left:0;right:0;display:flex;justify-content:center;gap:1vw;will-change:transform;transition:transform .3s ease-out}
-.seats .r1{bottom:7vh}.seats .r2{bottom:-3vh}
-.seat{position:relative;flex:none;border-radius:2.2vw 2.2vw .4vw .4vw;background:linear-gradient(#2a0a12,#12040a);box-shadow:inset 0 3px 0 #ffffff14,0 -6px 20px #0008}
-.r1 .seat{width:5.4vw;height:11vh;opacity:.8}.r2 .seat{width:7.6vw;height:20vh;background:linear-gradient(#3b0d19,#18050c)}
-.seat i{position:absolute;left:50%;bottom:78%;width:52%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:#050205}
-.seat i::after{content:"";position:absolute;left:12%;right:12%;top:82%;height:55%;border-radius:40% 40% 0 0;background:#050205}
-.stk{position:absolute;left:3vw;bottom:5vh;z-index:5;padding:8px 12px;font-size:10px;line-height:1.35;letter-spacing:.08em;color:#10142a;background:linear-gradient(135deg,#fff7c2,#ffd24d);transform:rotate(-5deg);box-shadow:3px 4px 0 #0007;border:1px dashed #10142a}
-.spk{position:absolute;z-index:4;color:#dfe8ff;font-size:22px;text-shadow:0 0 10px #8fb4ff,0 0 24px #8fb4ff;animation:tw 2.6s ease-in-out infinite;pointer-events:none}
-@keyframes tw{0%,100%{opacity:.15;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(25deg)}}
-#lg{background:linear-gradient(180deg,#fff,#b6bedc 45%,#eef1ff 55%,#7e86a8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-body.lt #lg{background:none;-webkit-text-fill-color:#0b0b0b;color:#0b0b0b}
-.mo[href]{transition:all .2s}
-.pp a.mo,.lt2 a.mo{display:inline-block;padding:5px 14px;border-radius:99px;background:linear-gradient(#ff6a6a,#e60000 55%,#b00000);color:#fff!important;box-shadow:inset 0 1px 0 #fff9,0 3px 8px #0004;text-shadow:0 1px 1px #0006}
-@media(max-width:700px){#lg{font-size:24px;white-space:nowrap}#tm{display:none}.ctl{width:94%}#nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:55%}.scr{width:88vw}.cur{width:12vw}.stk{display:none}.r1 .seat{width:12vw}.r2 .seat{width:16vw}}
 </style></head><body>
 <div id="bar" class="mo"><span class="t" id="clk">11:13 (GMT+2)</span><a href="#" onclick="mn.classList.add('on');return false">Menu</a></div>
 <a id="lg" href="#top">DYLAN PROTASI</a>
 <div id="mn"><a class="x mo" onclick="mn.classList.remove('on')">Sluiten ✕</a><a href="#top" onclick="mn.classList.remove('on')">Home</a><a href="#werk" onclick="mn.classList.remove('on')">Werk</a><a href="#doen" onclick="mn.classList.remove('on')">Diensten</a><a href="#stage" onclick="mn.classList.remove('on')">Stages</a><a href="#contact" onclick="mn.classList.remove('on')">Contact</a><a href="index.html">Originele site</a></div>
-<header class="hero" id="top"><div class="bgs" id="bgs"></div><div class="wall"></div><div class="beam"></div>
-<div class="scr" id="scr"><div class="frame"><div class="win" id="win"></div><i class="gl"></i></div>
-<div class="ctl"><b class="pb">&#9654;</b><span class="mo" id="nt">NOW SHOWING</span><span class="trk"><u id="pg"></u></span><span class="mo" id="tm">00:00</span><b class="pb">&#9632;</b></div></div>
-<div class="spot"></div>
-<div class="cur l"></div><div class="cur r"></div><div class="val"></div>
-<div class="seats" id="seats"></div>
-<span class="spk" style="left:14%;top:22%">&#10022;</span><span class="spk" style="right:13%;top:30%;animation-delay:.8s">&#10022;</span><span class="spk" style="left:24%;top:64%;animation-delay:1.5s;font-size:14px">&#10023;</span><span class="spk" style="right:22%;top:12%;animation-delay:2.1s;font-size:16px">&#10023;</span>
-<div class="stk mo">ADMIT ONE &#9733; ZAAL 01<br>PORTFOLIO &#8217;26</div>
-<a class="sc mo" href="#about">Scroll</a><div class="tri"></div></header>
+<header class="hero" id="top"><div class="bgs" id="bgs"></div><div class="win" id="win"></div><a class="sc mo" href="#about">Scroll</a><div class="tri"></div></header>
 <div class="cr" id="about"><div class="big"><div class="st"><div class="grp" id="grp">
 <div class="bw"><div class="l1" id="l1">Als een</div><div class="l2" id="l2">Trailer</div><div class="lt2" id="lt2">Ik bedenk.<br>Ik monteer.<br>Ik maak het af.<br><br>Dit is Dylan.<br><a class="mo" href="index.html" style="color:var(--red)">[ Mijn werk ]</a></div></div>
 <div class="pp"><h2 id="pph">Ik ben er voor de beleving. Gedreven door creativiteit, scherp gemaakt door samenwerking en nooit tevreden voor het klopt.</h2><p>Ik ben Dylan, een creatieve en leergierige jongen met een passie voor media, fashion en de filmindustrie. Ik hou me vooral bezig met grafisch ontwerp, conceptontwikkeling en video-editing. Ik combineer creatief denken met een scherp inzicht in doelgroepgericht werken, zowel zelfstandig als in teamverband. Elk project krijgt de aandacht van het eerste idee tot het laatste beeld.</p><p>Slapen kan wachten. Het werk komt eerst.</p><a class="mo" href="index.html" style="color:var(--red)">[ Meer over mij ]</a></div></div>
@@ -137,13 +92,6 @@ function pl(i){[bg,wn].forEach(function(c){var v=c.children[i].firstChild;try{v.
 function hs(){var n=CL.length,w=(hi+1)%n,b=(hi+2)%n;/* venster toont volgende clip, achtergrond toont de clip daarna */bg.children[hi].classList.remove('on');wn.children[hi].classList.remove('on');hi=(hi+1)%n;/* bg = clip hi+1, window = clip hi */
  var bgi=(hi+1)%n;bg.querySelectorAll('i.on').forEach(function(x){x.classList.remove('on')});wn.querySelectorAll('i.on').forEach(function(x){x.classList.remove('on')});bg.children[bgi].classList.add('on');wn.children[hi].classList.add('on');pl(bgi);pl(hi)}
 hi=0;(function(){var bgi=1;bg.children[bgi].classList.add('on');wn.children[0].classList.add('on');pl(bgi);pl(0)})();setInterval(hs,3600);
-
-// cinema seats + player
-(function(){var s=document.getElementById('seats');['r1','r2'].forEach(function(c,ri){var r=document.createElement('div');r.className='row '+c;var n=ri?15:22;for(var i=0;i<n;i++){var e=document.createElement('div');e.className='seat';if(Math.random()<(ri?.42:.5)){e.appendChild(document.createElement('i'))}r.appendChild(e)}s.appendChild(r)});
-var hr=document.getElementById('top');hr.classList.add('ld');requestAnimationFrame(function(){requestAnimationFrame(function(){hr.classList.remove('ld')})});
-hr.addEventListener('mousemove',function(e){var x=(e.clientX/innerWidth-.5);s.children[0].style.transform='translateX('+(-x*14)+'px)';s.children[1].style.transform='translateX('+(-x*30)+'px)'});
-var T=['Kinepolis · Kang','Hampton Bays · CS2','Dior x Prada','Auto edit','Furious','Pinko · Trunk show','Trailer TS','TV intro','Backrooms','Edit LH'],nt=document.getElementById('nt'),pg=document.getElementById('pg'),tm=document.getElementById('tm'),t0=Date.now(),last=-1;
-setInterval(function(){var i=(typeof hi==='number'?hi:0)%T.length;if(i!==last){last=i;t0=Date.now();nt.textContent='NOW SHOWING: '+T[i].toUpperCase()}var d=Date.now()-t0;pg.style.width=Math.min(100,d/36)+'%';tm.textContent='00:0'+Math.min(3,Math.floor(d/1000))+'/03:60'},100)})();
 // logo color
 function lc(){var r=document.getElementById('about').getBoundingClientRect(),c=document.getElementById('werk').getBoundingClientRect();document.body.classList.toggle('lt',r.top<30&&c.top>30)}addEventListener('scroll',lc);lc();
 // big words scroll
