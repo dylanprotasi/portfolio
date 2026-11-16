@@ -55,13 +55,26 @@ body.lt #lg{color:#0b0b0b}
 .sv .cn{position:absolute;right:18px;top:70px;z-index:6}.sv .sc2{position:absolute;right:18px;bottom:18px;z-index:6}
 .sv .hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#666;z-index:1;transition:opacity .4s}.sv.mv .hint{opacity:0}
 @media(max-width:800px){.sv{cursor:auto}}
+
+.big{height:420vh}.big .st{position:sticky;top:0;height:100vh;overflow:hidden;display:block}
+.grp{position:absolute;left:0;right:0;top:0;height:200vh;will-change:transform}
+.bw{position:absolute;left:0;right:0;top:0;height:100vh;overflow:hidden}
+.big .l1,.big .l2{position:absolute;left:50%;top:auto;font-family:Anton,Impact,sans-serif;text-transform:uppercase;color:var(--red);line-height:1;white-space:nowrap;font-size:15.5vw;transform:translateX(-50%) scaleY(1.9);transform-origin:50% 100%;transition:none;letter-spacing:.005em}
+.big .l2{top:auto;bottom:2vh}.big .l1{top:auto;bottom:calc(2vh + 23vw)}
+.big .lt2{position:absolute;left:18px;top:40vh;bottom:auto;font-size:15px;line-height:1.05;text-transform:uppercase;font-weight:600;opacity:0;transform:none;transition:opacity .5s;color:#0b0b0b}.big .lt2.on{opacity:1}
+.pp{position:absolute;left:0;right:0;top:100vh;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;color:#0b0b0b}
+.pp h2{font-family:"Archivo Narrow","Arial Narrow",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:-.035em;line-height:.88;font-size:clamp(28px,4.2vw,66px);max-width:min(58vw,860px);margin-bottom:6vh}
+.pp p{max-width:430px;font-size:13px;line-height:1.2;margin-bottom:16px;color:#111}
+.saw{position:absolute;left:0;right:0;bottom:-1px;height:150vh;background:#000;clip-path:polygon(0 100%,0 52%,16% 14%,16% 58%,34% 22%,34% 66%,54% 30%,54% 74%,74% 36%,74% 80%,100% 40%,100% 100%);transform:translateY(100%);will-change:transform}
 </style></head><body>
 <div id="bar" class="mo"><span class="t" id="clk">11:13 (GMT+2)</span><a href="#" onclick="mn.classList.add('on');return false">Menu</a></div>
 <a id="lg" href="#top">DYLAN PROTASI</a>
 <div id="mn"><a class="x mo" onclick="mn.classList.remove('on')">Sluiten ✕</a><a href="#top" onclick="mn.classList.remove('on')">Home</a><a href="#werk" onclick="mn.classList.remove('on')">Werk</a><a href="#doen" onclick="mn.classList.remove('on')">Diensten</a><a href="#stage" onclick="mn.classList.remove('on')">Stages</a><a href="#contact" onclick="mn.classList.remove('on')">Contact</a><a href="index.html">Originele site</a></div>
 <header class="hero" id="top"><div class="bgs" id="bgs"></div><div class="win" id="win"></div><a class="sc mo" href="#about">Scroll</a><div class="tri"></div></header>
-<div class="cr" id="about"><div class="big"><div class="st"><div class="l1" id="l1">Als een</div><div class="l2" id="l2">Trailer</div><div class="lt2" id="lt2">Ik bedenk.<br>Ik monteer.<br>Ik maak het af.<br><br>Dit is Dylan.<br><a class="mo" href="index.html" style="color:var(--red)">[ Mijn werk ]</a></div></div></div>
-<div class="sub"><h2 class="an">Creativiteit, scherper gemaakt door samenwerking en het eindeloos goed willen doen.</h2><p>Ik ben Dylan, een creatieve en leergierige jongen met een passie voor media, fashion en de filmindustrie. Ik hou me vooral bezig met grafisch ontwerp, conceptontwikkeling en video-editing.</p><p>Ik combineer creatief denken met een scherp inzicht in doelgroepgericht werken, zowel zelfstandig als in teamverband. Elk project krijgt de aandacht van het eerste idee tot het laatste beeld.</p><p>Slapen kan wachten. Het werk komt eerst.</p><a class="mo" href="index.html">[ Meer over mij ]</a></div></div>
+<div class="cr" id="about"><div class="big"><div class="st"><div class="grp" id="grp">
+<div class="bw"><div class="l1" id="l1">Als een</div><div class="l2" id="l2">Trailer</div><div class="lt2" id="lt2">Ik bedenk.<br>Ik monteer.<br>Ik maak het af.<br><br>Dit is Dylan.<br><a class="mo" href="index.html" style="color:var(--red)">[ Mijn werk ]</a></div></div>
+<div class="pp"><h2 id="pph">Ik ben er voor de beleving. Gedreven door creativiteit, scherp gemaakt door samenwerking en nooit tevreden voor het klopt.</h2><p>Ik ben Dylan, een creatieve en leergierige jongen met een passie voor media, fashion en de filmindustrie. Ik hou me vooral bezig met grafisch ontwerp, conceptontwikkeling en video-editing. Ik combineer creatief denken met een scherp inzicht in doelgroepgericht werken, zowel zelfstandig als in teamverband. Elk project krijgt de aandacht van het eerste idee tot het laatste beeld.</p><p>Slapen kan wachten. Het werk komt eerst.</p><a class="mo" href="index.html" style="color:var(--red)">[ Meer over mij ]</a></div></div>
+<div class="saw" id="saw"></div></div></div></div>
 <section class="fw" id="werk"><div class="hd mo">Uitgelicht werk // <a href="index.html">Alles bekijken</a></div><div class="stripes" id="sl"></div><div class="main" id="fm"><div class="vf mo">[ Bekijk volledig ]</div><div class="cap" id="fc"></div><div class="cn mo" id="fn"></div></div><div class="stripes" id="sr"></div></section>
 <div class="svw" id="doen"><section class="sv" id="svs"><div class="wl mo" id="wl"><div>Wat ik doe</div></div><div class="hint mo">Beweeg je muis</div><div class="tr" id="tr"></div><h2 class="an" id="sh"></h2><div class="lk mo"><a href="#werk">[ Alles bekijken ]</a><a href="index.html">[ Originele site ]</a></div><div class="cn mo" id="sn"></div><a class="sc2 mo" href="#stage">Scroll</a></section></div>
 <section class="pr" id="stage"><div class="gh">Stage</div><div class="row"><a class="im" id="pi" href="#"></a><div class="tt" id="pt"></div></div><div class="cn mo" id="pn"></div><div class="th" id="pth"></div></section>
@@ -82,7 +95,7 @@ hi=0;(function(){var bgi=1;bg.children[bgi].classList.add('on');wn.children[0].c
 // logo color
 function lc(){var r=document.getElementById('about').getBoundingClientRect(),c=document.getElementById('werk').getBoundingClientRect();document.body.classList.toggle('lt',r.top<30&&c.top>30)}addEventListener('scroll',lc);lc();
 // big words scroll
-var l2=document.getElementById('l2'),lt2=document.getElementById('lt2'),bgEl=document.querySelector('.big');function bs(){var r=bgEl.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));var q=Math.min(1,p/.55);l2.style.setProperty('--y',((1-q)*70)+'vh');lt2.classList.toggle('on',p>.5)}addEventListener('scroll',bs);bs();
+var lt2=document.getElementById('lt2'),bgEl=document.querySelector('.big'),grp=document.getElementById('grp'),saw=document.getElementById('saw'),pph=document.getElementById('pph'),cl=function(x){return Math.min(1,Math.max(0,x))};function bs(){var r=bgEl.getBoundingClientRect(),p=cl(-r.top/(r.height-innerHeight));var g=cl((p-.12)/.38),q=cl((p-.55)/.45);g=g*g*(3-2*g);grp.style.transform='translateY('+(-g*innerHeight)+'px)';saw.style.transform='translateY('+((1-q)*100)+'%)';lt2.classList.toggle('on',p>.04&&g<.6);if(g>.45&&pph&&!pph._d){scr(pph)}}addEventListener('scroll',bs);bs();
 var st2=document.querySelector('.big .st');st2.addEventListener('mousemove',function(e){if(Math.random()<.5){var d=document.createElement('div');d.className='px';var rc=st2.getBoundingClientRect();d.style.left=(e.clientX-rc.left+Math.round((Math.random()-.5)*50))+'px';d.style.top=(e.clientY-rc.top+Math.round((Math.random()-.5)*50))+'px';st2.appendChild(d);setTimeout(function(){d.remove()},500)}});
 // featured: horizontale filmstrip, hover/klik schuift naar het volgende
 var VM={kinepolis:'kang',hampton:'cs2',pinko:'pks'},fi=0,fm=document.getElementById('fm'),FI=[],cv=el('canvas');
@@ -117,8 +130,8 @@ function ps(i){pi=i;var p=pe[i];var im=document.getElementById('pi');im.style.ba
 pe.forEach(function(p,i){var t=el('i');t.style.backgroundImage='url('+p.img+')';t.onclick=function(){ps(i)};document.getElementById('pth').appendChild(t)});ps(0);
 
 // glitch scramble headline
-var CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&/';function scr(e){if(e._d)return;e._d=1;var t=e.dataset.t||(e.dataset.t=e.textContent),f=0;var iv=setInterval(function(){f++;var o='';for(var i=0;i<t.length;i++){o+=(t[i]==' '||i<f*1.4)?t[i]:CH[Math.floor(Math.random()*CH.length)]}e.textContent=o;if(f*1.4>=t.length){e.textContent=t;clearInterval(iv)}},35)}
-var sio=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){scr(x.target);sio.unobserve(x.target)}})},{threshold:.6});document.querySelectorAll('.sub h2,.ct h3').forEach(function(e){sio.observe(e)});
+var CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&/';function scr(e){if(e._d)return;e._d=1;var t=e.dataset.t||(e.dataset.t=e.textContent),f=0;var iv=setInterval(function(){f++;var o='';for(var i=0;i<t.length;i++){o+=(t[i]==' '||i<f*2.6)?t[i]:CH[Math.floor(Math.random()*CH.length)]}e.textContent=o;if(f*2.6>=t.length){e.textContent=t;clearInterval(iv)}},35)}
+var sio=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){scr(x.target);sio.unobserve(x.target)}})},{threshold:.6});document.querySelectorAll('.ct h3').forEach(function(e){sio.observe(e)});
 var tri=document.querySelector('.tri');function tsc(){var p=Math.min(1,scrollY/(innerHeight*.9));tri.style.transform='translateY(calc('+((1-p)*100)+'% - '+((1-p)*14)+'vw*0 + '+((1-p)*0)+'px))';tri.style.transform='translateY('+(((1-p)*(70-9.4))+(0))+'vh)'}addEventListener('scroll',tsc);tsc();
 // hero window follows mouse + grows on scroll
 var hw=document.getElementById('win');document.getElementById('top').addEventListener('mousemove',function(e){var x=(e.clientX/innerWidth-.5)*40,y=(e.clientY/innerHeight-.5)*30;hw.style.transform='translate(calc(-50% + '+x+'px),calc(-50% + '+y+'px))'});
