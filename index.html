@@ -773,6 +773,76 @@ var ab=document.getElementById('abph');
 if(ab){var AB=[['ab1',.747],['ab2',.75]],AR2=[[0,1]];ab.innerHTML=AR2.map(function(r){return '<div class="jr">'+r.map(function(j){return '<figure class="ph" style="flex:'+AB[j][1]+' 1 0%;cursor:default"><img alt="Dylan" src="'+I[AB[j][0]]+'"></figure>'}).join('')+'</div>'}).join('')}
 
 </script>
+<style id="anim-css">
+/* extra animaties */
+.rv{opacity:0}
+.rv.in{opacity:1;animation:rvIn .75s var(--d,0s) backwards}
+@keyframes rvIn{0%{opacity:0;transform:translateY(34px);clip-path:inset(0 0 100% 0)}35%{opacity:1;clip-path:inset(0 0 0 0)}45%{opacity:.35}55%{opacity:1}72%{transform:translateY(-3px)}100%{transform:none;clip-path:inset(0 0 0 0)}}
+.ch.rv.in{animation-name:rvCh}
+@keyframes rvCh{0%{opacity:0;transform:translateX(-24px);letter-spacing:.6em}100%{opacity:1;transform:none;letter-spacing:.15em}}
+.chips i{transition:transform .2s,background .2s,color .2s}
+.rv.in .chips i{animation:chipPop .5s backwards;animation-delay:calc(var(--d,0s) + .35s + var(--i,0)*.08s)}
+@keyframes chipPop{0%{opacity:0;transform:scale(.4) rotate(-6deg)}70%{transform:scale(1.12)}100%{opacity:1;transform:none}}
+.pc:hover .chips i{transform:translateY(-2px)}
+.pc:hover .chips i:nth-child(odd){transform:translateY(-2px) rotate(-2deg)}
+.pc:hover .chips i:nth-child(even){transform:translateY(-2px) rotate(2deg)}
+.pc .bar span:first-child:after{content:"_";opacity:0}
+.pc:hover .bar span:first-child:after{animation:bl .7s steps(2) infinite;opacity:1}
+.pc .go{transition:letter-spacing .25s,transform .25s}
+.pc:hover .go{letter-spacing:.14em;transform:translateX(6px)}
+.pc:hover .bnr img{transform:scale(1.08);filter:contrast(1.08) saturate(1.15)}
+.bnr{position:relative}
+.bnr:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);opacity:0;transition:opacity .3s}
+.pc:hover .bnr:after{opacity:1}
+.pc:hover .bnr:before{content:"";position:absolute;left:0;right:0;height:22%;top:-25%;z-index:2;pointer-events:none;background:linear-gradient(transparent,rgba(255,255,255,.22),transparent);animation:sweepY 1.1s linear infinite}
+@keyframes sweepY{to{top:110%}}
+#menu:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(420px circle at var(--mx,70%) var(--my,35%),rgba(130,170,255,.16),transparent 62%)}
+.crt{position:absolute;left:0;right:0;top:-12vh;height:12vh;pointer-events:none;z-index:1;background:linear-gradient(transparent,rgba(160,190,255,.09),transparent);animation:crtS 7s linear infinite}
+@keyframes crtS{to{top:112vh}}
+#items li{opacity:0;transform:translateX(-30px)}
+#home.go #items li{animation:liIn .5s backwards;opacity:1;transform:none}
+#home.go #items li:nth-child(1){animation-delay:.15s}#home.go #items li:nth-child(2){animation-delay:.3s}#home.go #items li:nth-child(3){animation-delay:.45s}#home.go #items li:nth-child(4){animation-delay:.6s}#home.go #items li:nth-child(5){animation-delay:.75s}#home.go #items li:nth-child(6){animation-delay:.9s}
+@keyframes liIn{0%{opacity:0;transform:translateX(-30px)}60%{opacity:1;transform:translateX(6px)}100%{transform:none}}
+#home.go h1{animation:h1In .9s backwards}
+@keyframes h1In{0%{opacity:0;transform:scale(1.06);filter:blur(8px)}30%{opacity:1}40%{opacity:.4}50%{opacity:1}100%{filter:none;transform:none}}
+h1.gl{animation:glt .32s steps(2) 1}
+@keyframes glt{0%{text-shadow:-6px 0 #ff2d6f,6px 0 #2de2ff;transform:translateX(-3px)}25%{text-shadow:5px 0 #ff2d6f,-5px 0 #2de2ff;transform:translateX(4px) skewX(-4deg)}50%{text-shadow:-3px 2px #ff2d6f,3px -2px #2de2ff;transform:none}75%{text-shadow:4px 0 #ff2d6f,-4px 0 #2de2ff;transform:translateX(-2px)}100%{transform:none}}
+.items a{transition:transform .15s,color .15s,background .15s}.items a:hover{transform:translateX(8px)}
+.items a:hover:before{animation:arr .5s steps(2) infinite}@keyframes arr{50%{transform:translateX(4px)}}
+.logo{will-change:transform}
+#pgb{position:fixed;left:0;top:0;height:4px;width:100%;z-index:30;background:var(--pink);transform-origin:0 50%;transform:scaleX(0);box-shadow:0 0 10px var(--pink);pointer-events:none}
+#ccf{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:0;background:repeating-linear-gradient(0deg,#fff 0 2px,#111 2px 4px);mix-blend-mode:difference}
+#ccf.on{animation:ccf .32s steps(4)}
+@keyframes ccf{0%{opacity:.85}30%{opacity:.2;background-position:0 7px}60%{opacity:.6}100%{opacity:0}}
+.mq{transition:transform .3s}.mq:hover .mqt{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1}.rv.in,.pc:hover .bnr:before,.crt,#home.go h1,#home.go #items li,h1.gl{animation:none!important}#items li{opacity:1;transform:none}}
+</style>
+<div id="pgb"></div><div id="ccf"></div>
+<script>
+(function(){
+var hm=document.getElementById('home'),menu=document.getElementById('menu'),boot=document.getElementById('boot');if(!hm||!menu)return;
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// CRT sweep
+var c=document.createElement('div');c.className='crt';menu.appendChild(c);
+// start menu intro when boot disappears
+function go(){hm.classList.add('go')}
+if(!boot||boot.classList.contains('off')||getComputedStyle(boot).display==='none'){go()}else{var mo=new MutationObserver(function(){if(boot.classList.contains('off')||getComputedStyle(boot).display==='none'){go();mo.disconnect()}});mo.observe(boot,{attributes:true,attributeFilter:['class','style']})}
+// spotlight
+menu.addEventListener('mousemove',function(e){var r=menu.getBoundingClientRect();menu.style.setProperty('--mx',(e.clientX-r.left)+'px');menu.style.setProperty('--my',(e.clientY-r.top)+'px')});
+// h1 glitch
+var h1=menu.querySelector('h1');setInterval(function(){if(!h1||rm)return;h1.classList.add('gl');setTimeout(function(){h1.classList.remove('gl')},340)},5200);
+// scroll reveal
+var T=[];document.querySelectorAll('#home .w > .ch, #home .w section > *').forEach(function(e){if(e.classList.contains('grid')||e.classList.contains('stats')||e.classList.contains('two')){Array.prototype.forEach.call(e.children,function(k,i){k.style.setProperty('--d',((i%3)*.1)+'s');T.push(k)})}else T.push(e)});
+T.forEach(function(e){e.classList.add('rv');Array.prototype.forEach.call(e.querySelectorAll('.chips i'),function(x,i){x.style.setProperty('--i',i)})});
+var CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&/<>';function scr(e){var n=e.firstChild;if(!n||n.nodeType!==3||e._s)return;e._s=1;var t=n.nodeValue,f=0,iv=setInterval(function(){f++;var o='';for(var i=0;i<t.length;i++)o+=(t[i]===' '||i<f*1.2)?t[i]:CH[Math.floor(Math.random()*CH.length)];n.nodeValue=o;if(f*1.2>=t.length){n.nodeValue=t;clearInterval(iv)}},38)}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var e=x.target;e.classList.add('in');io.unobserve(e);if(e.tagName==='H2'&&!rm)scr(e)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+if(rm){T.forEach(function(e){e.classList.add('in')})}else T.forEach(function(e){io.observe(e)});
+// progress bar
+var pb=document.getElementById('pgb');function sp(){var h=hm.offsetParent!==null||hm.offsetHeight>0;var m=document.documentElement.scrollHeight-innerHeight;pb.style.transform='scaleX('+(h&&m>0?Math.min(1,scrollY/m):0)+')'}addEventListener('scroll',sp,{passive:true});sp();
+// channel change flash on route change
+var cf=document.getElementById('ccf');addEventListener('hashchange',function(){if(rm)return;cf.classList.remove('on');void cf.offsetWidth;cf.classList.add('on')});
+})();
+</script>
 <script src="i18n.js"></script>
 </body>
 </html>
