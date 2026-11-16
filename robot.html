@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DYLAN PROTASI — Content &amp; Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#dcdccb;--red:#e60000;--blk:#050505;--gr:#1d1d1d}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}html,body{overflow-x:hidden}
+body{background:var(--blk);color:#fff;font-family:"Archivo Narrow",Arial Narrow,Helvetica,sans-serif;font-size:15px}
+a{color:inherit;text-decoration:none}
+.an{font-family:Anton,Impact,"Arial Narrow",sans-serif;text-transform:uppercase;font-weight:400;line-height:.9}
+.mo{font-family:"Space Mono",ui-monospace,monospace;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+#bar{position:fixed;top:0;left:0;right:0;z-index:40;height:64px;display:flex;justify-content:space-between;align-items:flex-start;padding:14px 18px;pointer-events:none;mix-blend-mode:difference;color:#fff}
+#bar *{pointer-events:auto}#bar .t::before{content:"";display:inline-block;width:6px;height:6px;background:currentColor;margin-right:8px}
+#lg{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:41;font-family:Anton,sans-serif;font-size:34px;letter-spacing:.02em;text-transform:uppercase;color:#a3acd0;line-height:1;transition:color .4s;clip-path:polygon(0 12%,8% 0,100% 0,100% 88%,92% 100%,0 100%);padding:4px 8px}
+body.lt #lg{color:#0b0b0b}
+.hero{position:relative;height:100vh;min-height:520px;overflow:hidden;background:#000}
+.hero .bgs,.hero .bgs i{position:absolute;inset:0}.hero .bgs i{background-size:cover;background-position:center;opacity:0;transition:opacity 1s;filter:blur(18px) brightness(.7);transform:scale(1.15)}.hero .bgs i.on{opacity:1}
+.win{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(48vw,720px);aspect-ratio:16/9;overflow:hidden;background:#000;box-shadow:0 30px 80px #0008}
+.win i{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s}.win i.on{opacity:1}
+.sc{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5}
+.tri{position:absolute;left:0;right:0;bottom:-1px;height:12vw;background:var(--cream);clip-path:polygon(0 100%,100% 100%,100% 0,92% 70%,86% 20%,78% 100%,0 100%);z-index:3}
+.cr{background:var(--cream);color:#0b0b0b;position:relative}
+.big{height:230vh;position:relative}.big .st{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center}
+.big .w{display:flex;gap:2.2vw;align-items:flex-end}.big .w span{font-family:Anton,sans-serif;text-transform:uppercase;color:var(--red);font-size:clamp(120px,30vw,520px);line-height:.85;transform:scaleX(.75);transform-origin:left bottom;display:block}
+.sub{text-align:center;max-width:620px;margin:0 auto;padding:18vh 22px 20vh;font-size:15px;line-height:1.28;position:relative}.sub h2{font-size:clamp(26px,4vw,52px);margin-bottom:34px;line-height:.9}.sub p{margin-bottom:22px}.sub a{color:var(--red)}
+.sub::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:10vw;background:var(--blk);clip-path:polygon(0 100%,100% 100%,100% 70%,92% 0,86% 60%,78% 10%,60% 90%,50% 40%,38% 100%,20% 50%,8% 100%,0 80%)}
+.fw{position:relative;height:100vh;min-height:520px;background:#000;overflow:hidden;display:flex;align-items:stretch;padding:70px 0 0}
+.fw .hd{position:absolute;top:80px;left:18px;z-index:3}
+.fw .stripes{display:flex;gap:6px;width:14vw;flex:none;padding:0 6px}.fw .stripes b{flex:1;cursor:pointer;opacity:.9;transition:opacity .2s,transform .2s}.fw .stripes b:hover{opacity:1;transform:scaleY(1.01)}
+.fw .main{flex:1;position:relative;margin:34px 0 56px}.fw .main i{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .6s;display:block}.fw .main i.on{opacity:1}
+.fw .cap{position:absolute;left:18px;bottom:16px;font-size:18px;text-transform:uppercase;font-weight:600;letter-spacing:.01em}.fw .cn{position:absolute;right:18px;bottom:18px}
+.fw .vf{position:absolute;inset:0;display:grid;place-items:center;z-index:2;opacity:0;transition:opacity .2s;pointer-events:none}.fw .main:hover .vf{opacity:1}
+.sv{position:relative;height:100vh;min-height:520px;background:#000;overflow:hidden}
+.sv .wl{position:absolute;top:84px;left:18px;line-height:1.5}.sv .wl a{display:block;opacity:.55;cursor:pointer}.sv .wl a.on{opacity:1}.sv .wl a.on::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--red);margin-right:6px;margin-left:-11px}
+.sv h2{z-index:3;position:absolute;left:18px;top:50%;transform:translateY(-10%);font-size:clamp(46px,7vw,100px);letter-spacing:-.01em;transform-origin:left;transition:opacity .3s}.sv .lk{position:absolute;left:18px;top:calc(50% + 7vw);display:flex;gap:14px;font-size:9px}
+.sv .ph{position:absolute;left:46vw;top:0;bottom:0;width:30vw}.sv .ph img{position:absolute;width:15vw;min-width:150px;aspect-ratio:3/4;object-fit:cover;opacity:0;transition:all .8s cubic-bezier(.2,.8,.2,1);transform:translateY(-130%) rotate(8deg);left:0}.sv .ph img.on{opacity:1;transform:translateY(var(--y)) rotate(var(--r))}
+.sv .cn{position:absolute;left:18px;bottom:18px}.sv .sc2{position:absolute;right:18px;bottom:18px}
+.pr{position:relative;background:var(--gr);min-height:100vh;overflow:hidden;padding:64px 0 40px}
+.pr .gh{position:absolute;left:1vw;top:20vh;font-family:Anton,sans-serif;font-size:36vw;line-height:.8;color:#ffffff0d;text-transform:uppercase;pointer-events:none}
+.pr .row{position:relative;display:flex;align-items:flex-start;justify-content:center;gap:2vw;padding-top:8vh}
+.pr .im{width:min(48vw,720px);aspect-ratio:16/9;background-size:cover;background-position:center;position:relative}.pr .tt{width:20vw;min-width:200px;font-size:clamp(17px,1.6vw,22px);text-transform:uppercase;line-height:1.05;font-weight:600}.pr .tt small{display:block;margin-top:14px;font-size:10px;color:#aaa;font-family:"Space Mono",monospace}
+.pr .cn{position:absolute;right:18px;top:calc(8vh + 42vw*.5625 + 60px)}
+.pr .th{position:relative;display:flex;gap:6px;padding:0 18px;margin-top:46px}.pr .th i{flex:1;aspect-ratio:16/9;background-size:cover;background-position:center;opacity:.55;cursor:pointer;transition:opacity .2s}.pr .th i.on,.pr .th i:hover{opacity:1}
+.ct{background:var(--cream);color:#0b0b0b;position:relative;min-height:100vh;overflow:hidden;padding:140px 18px 0}
+.ct h3{position:absolute;left:50%;top:150px;width:40vw;font-size:clamp(20px,2.4vw,34px);margin-left:2vw;font-family:"Archivo Narrow",sans-serif;font-weight:600;line-height:1}
+.ct .info{position:absolute;left:50%;top:260px;margin-left:2vw;line-height:1.5}.ct .info b{display:block;margin-top:18px;font-family:"Archivo Narrow";font-size:11px}
+.ct .giant{position:absolute;left:-1vw;bottom:34px;font-family:Anton,sans-serif;text-transform:uppercase;color:var(--red);font-size:clamp(130px,29vw,520px);line-height:.8;white-space:nowrap;transform:scaleX(.7);transform-origin:left bottom}
+.ct .fo{position:absolute;left:18px;right:18px;bottom:12px;display:flex;justify-content:space-between}
+#mn{position:fixed;inset:0;z-index:60;background:var(--red);color:#000;display:none;flex-direction:column;justify-content:center;padding:0 5vw}#mn.on{display:flex}#mn a{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(50px,10vw,140px);line-height:1}#mn a:hover{color:#fff}#mn .x{position:absolute;top:14px;right:18px;cursor:pointer}
+@media(max-width:800px){.win{width:84vw}.fw .stripes{width:8vw}.sv .ph{left:42vw}.pr .row{flex-direction:column;align-items:center}.pr .tt{width:84vw}.pr .cn{display:none}.ct h3,.ct .info{position:static;margin:0 0 20px;width:auto}.ct{padding-top:90px}.big .w span{font-size:34vw}}
+</style></head><body>
+<div id="bar" class="mo"><span class="t" id="clk">11:13 (GMT+2)</span><a href="#" onclick="mn.classList.add('on');return false">Menu</a></div>
+<a id="lg" href="#top">DYLAN PROTASI</a>
+<div id="mn"><a class="x mo" onclick="mn.classList.remove('on')">Sluiten ✕</a><a href="#top" onclick="mn.classList.remove('on')">Home</a><a href="#werk" onclick="mn.classList.remove('on')">Werk</a><a href="#doen" onclick="mn.classList.remove('on')">Diensten</a><a href="#stage" onclick="mn.classList.remove('on')">Stages</a><a href="#contact" onclick="mn.classList.remove('on')">Contact</a><a href="index.html">Originele site</a></div>
+<header class="hero" id="top"><div class="bgs" id="bgs"></div><div class="win" id="win"></div><a class="sc mo" href="#about">Scroll</a><div class="tri"></div></header>
+<div class="cr" id="about"><div class="big"><div class="st"><div class="w" id="bw"><span>Als</span><span>een</span><span>film</span></div></div></div>
+<div class="sub"><h2 class="an">Creativiteit, scherper gemaakt door samenwerking en het eindeloos goed willen doen.</h2><p>Ik ben Dylan, een creatieve en leergierige jongen met een passie voor media, fashion en de filmindustrie. Ik hou me vooral bezig met grafisch ontwerp, conceptontwikkeling en video-editing.</p><p>Ik combineer creatief denken met een scherp inzicht in doelgroepgericht werken, zowel zelfstandig als in teamverband. Elk project krijgt de aandacht van het eerste idee tot het laatste beeld.</p><p>Slapen kan wachten. Het werk komt eerst.</p><a class="mo" href="index.html">[ Meer over mij ]</a></div></div>
+<section class="fw" id="werk"><div class="hd mo">Uitgelicht werk // <a href="index.html">Alles bekijken</a></div><div class="stripes" id="sl"></div><div class="main" id="fm"><div class="vf mo">[ Bekijk volledig ]</div><div class="cap" id="fc"></div><div class="cn mo" id="fn"></div></div><div class="stripes" id="sr"></div></section>
+<section class="sv" id="doen"><div class="wl mo" id="wl"><div>Wat ik doe</div></div><h2 class="an" id="sh"></h2><div class="lk mo"><a href="#werk">[ Alles bekijken ]</a><a href="index.html">[ Originele site ]</a></div><div class="ph" id="sp"></div><div class="cn mo" id="sn"></div><a class="sc2 mo" href="#stage">Scroll</a></section>
+<section class="pr" id="stage"><div class="gh">Stage</div><div class="row"><a class="im" id="pi" href="#"></a><div class="tt" id="pt"></div></div><div class="cn mo" id="pn"></div><div class="th" id="pth"></div></section>
+<section class="ct" id="contact"><h3>Content- en marketingspecialist voor fashion en film.</h3><div class="info mo"><b>Contact</b>Dylan Protasi<br>Student Communicatie, PR &amp; Reputation Management<br><a href="mailto:dylan.protasi@gmail.com">dylan.protasi@gmail.com</a><br>+32 483 12 39 88<b>Basis</b>Liedekerke<br>België<b>Elders</b><a href="index.html">Originele site</a></div><div class="giant">Protasi</div><div class="fo mo"><span>© 2026 Dylan Protasi</span><a href="#top">Naar boven ↑</a></div></section>
+<script>
+var D=[{"id": "kinepolis", "t": "KINEPOLIS", "img": "img/bn-kinepolis.jpg", "c": "#1a396e", "yr": "2026", "role": "Stage · Marketing Assistent"}, {"id": "hampton", "t": "HAMPTON BAYS", "img": "img/bn-hampton.jpg", "c": "#1f1d22", "yr": "2026", "role": "Stage · Belgisch modemerk"}, {"id": "pinko", "t": "PINKO", "img": "img/bn-pinko.jpg", "c": "#d0006b", "yr": "2025", "role": "Dagstage · Eindopdracht Fashion Masterclass"}, {"id": "disney", "t": "MAASMECHELEN", "img": "img/bn-disney.jpg", "c": "#303170", "yr": "2026", "role": "Bachelorproef · Concept & strategie"}, {"id": "fifth", "t": "THE FIFTH", "img": "img/bn-fifth.jpg", "c": "#e4dacd", "yr": "2025", "role": "Eindwerk jaar 2 · Magazine"}, {"id": "rhode-xmas", "t": "RHODE CHRISTMAS", "img": "img/bn-rhode-xmas.jpg", "c": "#d9b8b1", "yr": "2026", "role": "Fictieve campagne"}, {"id": "rhode", "t": "RHODE LIP BOOST", "img": "img/bn-rhode.jpg", "c": "#bec5cc", "yr": "2026", "role": "Fictieve campagne"}, {"id": "ioan", "t": "IOAN SUN SET", "img": "img/bn-ioan.jpg", "c": "#beaea7", "yr": "2026", "role": "Fictieve campagne"}, {"id": "lipton", "t": "LIPTON SPARKLING", "img": "img/bn-lipton.jpg", "c": "#9eae87", "yr": "2026", "role": "Schoolopdracht · Instagram-carrousel"}],S=[["Content", ["img/bn-ioan.jpg", "img/bn-rhode.jpg"]], ["Trailers &amp; video", ["img/bn-kinepolis.jpg", "img/bn-disney.jpg"]], ["Campagnes", ["img/bn-rhode-xmas.jpg", "img/bn-hampton.jpg", "img/bn-pinko.jpg"]], ["Grafisch ontwerp", ["img/bn-fifth.jpg", "img/bn-lipton.jpg"]]];
+function el(t,c){var e=document.createElement(t);if(c)e.className=c;return e}
+// clock
+function ck(){var d=new Date(),o=new Intl.DateTimeFormat('nl-BE',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Brussels'}).format(d);document.getElementById('clk').textContent=o+' (GMT+1)'}ck();setInterval(ck,20000);
+// hero
+var bg=document.getElementById('bgs'),wn=document.getElementById('win'),hi=0;
+D.forEach(function(p,i){var a=el('i');a.style.backgroundImage='url('+p.img+')';bg.appendChild(a);var b=el('i');b.style.backgroundImage='url('+p.img+')';wn.appendChild(b)});
+function hs(){bg.children[hi]&&bg.children[hi].classList.remove('on');wn.children[hi].classList.remove('on');hi=(hi+1)%D.length;bg.children[hi].classList.add('on');wn.children[hi].classList.add('on')}
+bg.children[0].classList.add('on');wn.children[0].classList.add('on');setInterval(hs,3200);
+// logo color
+function lc(){var r=document.getElementById('about').getBoundingClientRect(),c=document.getElementById('werk').getBoundingClientRect();document.body.classList.toggle('lt',r.top<30&&c.top>30)}addEventListener('scroll',lc);lc();
+// big words scroll
+var bw=document.getElementById('bw');function bs(){var r=document.querySelector('.big').getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));bw.style.transform='translateX('+(8-p*70)+'vw)'}addEventListener('scroll',bs);bs();
+// featured
+var fi=0,fm=document.getElementById('fm');
+D.forEach(function(p,i){var a=el('i');a.style.backgroundImage='url('+p.img+')';a.style.backgroundColor=p.c;fm.insertBefore(a,fm.firstChild)});
+var fimgs=[].slice.call(fm.querySelectorAll('i')).reverse();
+function fs(n){fi=(n+D.length)%D.length;fimgs.forEach(function(a,i){a.classList.toggle('on',i==fi)});document.getElementById('fc').textContent=D[fi].t;document.getElementById('fn').textContent=('0'+(fi+1)).slice(-2)+'/'+('0'+D.length).slice(-2);fm.onclick=function(e){if(e.target.closest('.vf')||e.target==fm||e.target.tagName=='I')location.href='index.html#/'+D[fi].id};
+ ['sl','sr'].forEach(function(id,s){var c=document.getElementById(id);c.innerHTML='';for(var k=0;k<6;k++){var j=s?fi+1+k:fi-6+k,p=D[(j%D.length+D.length)%D.length],b=el('b');b.style.background=p.c;b.dataset.j=j;b.onclick=function(){fs(+this.dataset.j)};c.appendChild(b)}})}
+fs(0);var ft=setInterval(function(){fs(fi+1)},3800);fm.onmouseenter=function(){clearInterval(ft)};
+// services
+var si=0,wl=document.getElementById('wl'),sp=document.getElementById('sp'),sh=document.getElementById('sh'),sn=document.getElementById('sn');
+S.forEach(function(s,i){var a=el('a');a.innerHTML=s[0];a.onclick=function(){ss(i);clearInterval(st)};wl.appendChild(a)});
+function ss(i){si=i;[].forEach.call(wl.querySelectorAll('a'),function(a,k){a.classList.toggle('on',k==i)});sh.innerHTML=S[i][0];sn.textContent='0'+(i+1)+'/0'+S.length;sp.innerHTML='';S[i][1].forEach(function(u,k){var m=el('img');m.src=u;m.alt='';m.style.setProperty('--y',(20+k*18)+'vh');m.style.setProperty('--r',(k%2?7:-6)+'deg');m.style.left=(k*4)+'vw';sp.appendChild(m);setTimeout(function(){m.classList.add('on')},60+k*160)})}
+ss(0);var st=setInterval(function(){ss((si+1)%S.length)},2800);
+// stage
+var pe=D.slice(0,5),pi=0;
+function ps(i){pi=i;var p=pe[i];var im=document.getElementById('pi');im.style.backgroundImage='url('+p.img+')';im.href='index.html#/'+p.id;document.getElementById('pt').innerHTML=p.t+'<small>'+p.role+' · '+p.yr+'</small>';document.getElementById('pn').textContent='0'+(i+1)+'/0'+pe.length;[].forEach.call(document.getElementById('pth').children,function(t,k){t.classList.toggle('on',k==i)})}
+pe.forEach(function(p,i){var t=el('i');t.style.backgroundImage='url('+p.img+')';t.onclick=function(){ps(i)};document.getElementById('pth').appendChild(t)});ps(0);
+</script></body></html>
